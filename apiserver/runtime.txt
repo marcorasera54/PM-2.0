@@ -1,0 +1,2 @@
+python manage.py
+python-3.12.6
