@@ -18,6 +18,15 @@ export const SingleExport: FC<Props> = ({ service, refreshing }) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isLoading] = useState(false);
 
+  const statusTranslations: Record<"completed" | "processing" | "failed" | "expired", string> = {
+    completed: "completato",
+    processing: "in elaborazione",
+    failed: "fallito",
+    expired: "scaduto",
+  };
+  
+  const statusKey = service.status as keyof typeof statusTranslations;
+
   const checkExpiry = (inputDateString: string) => {
     const currentDate = new Date();
     const expiryDate = getDate(inputDateString);
@@ -31,7 +40,7 @@ export const SingleExport: FC<Props> = ({ service, refreshing }) => {
       <div>
         <h4 className="flex items-center gap-2 text-sm">
           <span>
-            Export to{" "}
+            Esporta come{" "}
             <span className="font-medium">
               {provider === "csv" ? "CSV" : provider === "xlsx" ? "Excel" : provider === "json" ? "JSON" : ""}
             </span>{" "}
@@ -49,12 +58,12 @@ export const SingleExport: FC<Props> = ({ service, refreshing }) => {
                       : ""
             }`}
           >
-            {refreshing ? "Refreshing..." : service.status}
+            {refreshing ? "Refreshing..." : statusKey || service.status}
           </span>
         </h4>
         <div className="mt-2 flex items-center gap-2 text-xs text-custom-text-200">
           <span>{renderFormattedDate(service.created_at)}</span>|
-          <span>Exported by {service?.initiated_by_detail?.display_name}</span>
+          <span>Esportato da {service?.initiated_by_detail?.display_name}</span>
         </div>
       </div>
       {checkExpiry(service.created_at) ? (
@@ -63,7 +72,7 @@ export const SingleExport: FC<Props> = ({ service, refreshing }) => {
             <div>
               <a target="_blank" href={service?.url} rel="noopener noreferrer">
                 <Button variant="primary" className="w-full">
-                  {isLoading ? "Downloading..." : "Download"}
+                  {isLoading ? "Scaricamento in corso..." : "Scarica"}
                 </Button>
               </a>
             </div>

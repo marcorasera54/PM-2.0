@@ -1,4 +1,5 @@
 import { differenceInDays, format, formatDistanceToNow, isAfter, isEqual, isValid, parseISO } from "date-fns";
+import { it } from "date-fns/locale";
 import isNumber from "lodash/isNumber";
 
 // Format Date Helpers
@@ -12,7 +13,7 @@ import isNumber from "lodash/isNumber";
  */
 export const renderFormattedDate = (
   date: string | Date | undefined | null,
-  formatToken: string = "MMM dd, yyyy"
+  formatToken: string = "dd MMM, yyyy"
 ): string | undefined => {
   // Parse the date to check if it is valid
   const parsedDate = getDate(date);
@@ -23,10 +24,10 @@ export const renderFormattedDate = (
   let formattedDate;
   try {
     // Format the date in the format provided or default format (MMM dd, yyyy)
-    formattedDate = format(parsedDate, formatToken);
+    formattedDate = format(parsedDate, formatToken, { locale: it });
   } catch (e) {
     // Format the date in format (MMM dd, yyyy) in case of any error
-    formattedDate = format(parsedDate, "MMM dd, yyyy");
+    formattedDate = format(parsedDate, "dd MMM, yyyy", { locale: it });
   }
   return formattedDate;
 };
@@ -167,9 +168,9 @@ export const calculateTimeAgo = (time: string | number | Date | null): string =>
   // Parse the time to check if it is valid
   const parsedTime = typeof time === "string" || typeof time === "number" ? parseISO(String(time)) : time;
   // return if undefined
-  if (!parsedTime) return ""; // Return empty string for invalid dates
+  if (!parsedTime || isNaN(parsedTime.getTime())) return ""; // Return empty string for invalid dates
   // Format the time in the form of amount of time passed since the event happened
-  const distance = formatDistanceToNow(parsedTime, { addSuffix: true });
+  const distance = formatDistanceToNow(parsedTime, { addSuffix: true, locale: it });
   return distance;
 };
 

@@ -52,7 +52,7 @@ export const InputSearch: FC<IInputSearch> = (props) => {
         )}
         value={query}
         onChange={(e) => updateQuery(e.target.value)}
-        placeholder={inputPlaceholder ?? "Search"}
+        placeholder={inputPlaceholder ?? "Cerca"}
         onKeyDown={searchInputKeyDown}
       />
     </div>

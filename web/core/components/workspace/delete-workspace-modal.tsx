@@ -124,22 +124,22 @@ export const DeleteWorkspaceModal: React.FC<Props> = observer((props) => {
                       <AlertTriangle className="h-6 w-6 text-red-600" aria-hidden="true" />
                     </span>
                     <span className="flex items-center justify-start">
-                      <h3 className="text-xl font-medium 2xl:text-2xl">Delete workspace</h3>
+                      <h3 className="text-xl font-medium 2xl:text-2xl">Elimina lo spazio di lavoro</h3>
                     </span>
                   </div>
 
                   <span>
                     <p className="text-sm leading-7 text-custom-text-200">
-                      Are you sure you want to delete workspace{" "}
-                      <span className="break-words font-semibold">{data?.name}</span>? All of the data related to the
-                      workspace will be permanently removed. This action cannot be undone.
+                    Sei sicuro di voler eliminare lo spazio di lavoro{" "}
+                      <span className="break-words font-semibold">{data?.name}</span>? Tutti i dati relativi allo spazio di lavoro
+                      verranno rimossi permanentemente. Questa azione non può essere annullata.
                     </p>
                   </span>
 
                   <div className="text-custom-text-200">
                     <p className="break-words text-sm ">
-                      Enter the workspace name <span className="font-medium text-custom-text-100">{data?.name}</span> to
-                      continue:
+                      Inserisci il nome dello spazio di lavoro <span className="font-medium text-custom-text-100">{data?.name}</span> per
+                      continua:
                     </p>
                     <Controller
                       control={control}
@@ -153,7 +153,7 @@ export const DeleteWorkspaceModal: React.FC<Props> = observer((props) => {
                           onChange={onChange}
                           ref={ref}
                           hasError={Boolean(errors.workspaceName)}
-                          placeholder="Workspace name"
+                          placeholder="Nome dello spazio di lavoro"
                           className="mt-2 w-full"
                           autoComplete="off"
                         />
@@ -163,8 +163,8 @@ export const DeleteWorkspaceModal: React.FC<Props> = observer((props) => {
 
                   <div className="text-custom-text-200">
                     <p className="text-sm">
-                      To confirm, type <span className="font-medium text-custom-text-100">delete my workspace</span>{" "}
-                      below:
+                      Per confermare, digita <span className="font-medium text-custom-text-100">elimina il mio spazio di lavoro</span>{" "}
+                      qui sotto:
                     </p>
                     <Controller
                       control={control}
@@ -178,7 +178,7 @@ export const DeleteWorkspaceModal: React.FC<Props> = observer((props) => {
                           onChange={onChange}
                           ref={ref}
                           hasError={Boolean(errors.confirmDelete)}
-                          placeholder="Enter 'delete my workspace'"
+                          placeholder="Inserisci 'elimina il mio spazio di lavoro'"
                           className="mt-2 w-full"
                           autoComplete="off"
                         />
@@ -188,10 +188,10 @@ export const DeleteWorkspaceModal: React.FC<Props> = observer((props) => {
 
                   <div className="flex justify-end gap-2">
                     <Button variant="neutral-primary" size="sm" onClick={handleClose}>
-                      Cancel
+                      Annulla
                     </Button>
                     <Button variant="danger" size="sm" type="submit" disabled={!canDelete} loading={isSubmitting}>
-                      {isSubmitting ? "Deleting" : "Delete workspace"}
+                      {isSubmitting ? "Eliminazione in corso" : "Elimina lo spazio di lavoro"}
                     </Button>
                   </div>
                 </form>

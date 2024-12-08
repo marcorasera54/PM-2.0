@@ -119,10 +119,10 @@ export const SendWorkspaceInvitationModal: React.FC<Props> = observer((props) =>
                 >
                   <div className="space-y-5">
                     <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-custom-text-100">
-                      Invite people to collaborate
+                      Invita persone a collaborare
                     </Dialog.Title>
                     <div className="mt-2">
-                      <p className="text-sm text-custom-text-200">Invite members to work on your workspace.</p>
+                      <p className="text-sm text-custom-text-200">Invita i membri a lavorare sul tuo spazio di lavoro.</p>
                     </div>
 
                     <div className="mb-3 space-y-4">
@@ -136,10 +136,10 @@ export const SendWorkspaceInvitationModal: React.FC<Props> = observer((props) =>
                               control={control}
                               name={`emails.${index}.email`}
                               rules={{
-                                required: "Email ID is required",
+                                required: "Email ID è richiesto",
                                 pattern: {
                                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                                  message: "Invalid Email ID",
+                                  message: "Email ID invalido",
                                 },
                               }}
                               render={({ field: { value, onChange, ref } }) => (
@@ -152,7 +152,7 @@ export const SendWorkspaceInvitationModal: React.FC<Props> = observer((props) =>
                                     onChange={onChange}
                                     ref={ref}
                                     hasError={Boolean(errors.emails?.[index]?.email)}
-                                    placeholder="Enter their email..."
+                                    placeholder="Inserisci la loro email..."
                                     className="w-full text-xs sm:text-sm"
                                   />
                                   {errors.emails?.[index]?.email && (
@@ -215,14 +215,14 @@ export const SendWorkspaceInvitationModal: React.FC<Props> = observer((props) =>
                       onClick={appendField}
                     >
                       <Plus className="h-4 w-4" />
-                      Add more
+                      Aggiungi un altro
                     </button>
                     <div className="flex items-center gap-2">
                       <Button variant="neutral-primary" size="sm" onClick={handleClose}>
-                        Cancel
+                        Annulla
                       </Button>
                       <Button variant="primary" size="sm" type="submit" loading={isSubmitting}>
-                        {isSubmitting ? "Sending invitation" : "Send invitation"}
+                        {isSubmitting ? "Invio invito in corso" : "Invia invito"}
                       </Button>
                     </div>
                   </div>

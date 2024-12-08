@@ -7,7 +7,7 @@ import { useParams, usePathname } from "next/navigation";
 // icons
 import { CalendarCheck2, CalendarClock, Layers, Link, Paperclip } from "lucide-react";
 // types
-import { TIssue, IIssueDisplayProperties, TIssuePriorities } from "@plane/types";
+import { TIssue, IIssueDisplayProperties, TIssuePriorities, TIssueAttachment } from "@plane/types";
 // ui
 import { Tooltip } from "@plane/ui";
 // components
@@ -227,6 +227,37 @@ export const IssueProperties: React.FC<IIssueProperties> = observer((props) => {
       );
   };
 
+  const getFirstImageAttachment = (attachments: TIssueAttachment[]): string => {
+    // List of default fallback image URLs
+    const defaultImageUrls = [
+      "https://wallpapercave.com/wp/wp7048096.jpg", // Default 1
+      "https://www.top5list.net/wp-content/uploads/2017/01/top5s-sports-cars-1-1900x1062_c.jpg", // Default 2
+      "https://www.awesome11.com/wp-content/uploads/2016/10/Sports-Cars.jpg", // Default 3
+      "https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2021/05/4b-Via-Car-Pixel-Cropped.jpg"
+    ];
+  
+    // Function to get a random image from the fallback list
+    const getRandomFallbackImage = (): string => {
+      const randomIndex = Math.floor(Math.random() * defaultImageUrls.length);
+      return defaultImageUrls[randomIndex];
+    };
+  
+    // Find the first image attachment
+    const imageAttachment = attachments.find(
+      (attachment) => 
+        attachment.asset_url && 
+        (attachment.attributes.name.toLowerCase().endsWith('.jpg') || 
+        attachment.attributes.name.toLowerCase().endsWith('.png') || 
+        attachment.attributes.name.toLowerCase().endsWith('.jpeg')) // Check if the file is an image
+    );
+  
+    // Return the asset_url of the first image or a random fallback image URL
+    return imageAttachment ? imageAttachment.asset_url : getRandomFallbackImage();
+  };
+  
+  const firstImageUrl = getFirstImageAttachment(issue?.issue_attachments || []);  
+  
+
   const handleEstimate = (value: string | undefined) => {
     updateIssue &&
       updateIssue(issue.project_id, issue.id, { estimate_point: value }).then(() => {
@@ -271,6 +302,16 @@ export const IssueProperties: React.FC<IIssueProperties> = observer((props) => {
 
   return (
     <div className={className}>
+      {firstImageUrl && (
+        <div className="mb-4">
+          <img
+            src={firstImageUrl}
+            alt="Attachment"
+            className="max-w-full h-auto rounded-lg shadow-md"
+            style={{ objectFit: "cover", width: "100%", height: "auto" }}
+          />
+        </div>
+      )}
       {/* basic properties */}
       {/* state */}
       <WithDisplayPropertiesHOC displayProperties={displayProperties} displayPropertyKey="state">

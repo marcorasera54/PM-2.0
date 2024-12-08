@@ -68,37 +68,37 @@ type Props = {
 
 const navigation = (workspaceSlug: string, projectId: string) => [
   {
-    name: "Issues",
+    name: "Tasks",
     href: `/${workspaceSlug}/projects/${projectId}/issues`,
     Icon: LayersIcon,
     access: [EUserPermissions.ADMIN, EUserPermissions.MEMBER, EUserPermissions.GUEST],
   },
   {
-    name: "Cycles",
+    name: "Cicli",
     href: `/${workspaceSlug}/projects/${projectId}/cycles`,
     Icon: ContrastIcon,
     access: [EUserPermissions.ADMIN, EUserPermissions.MEMBER],
   },
   {
-    name: "Modules",
+    name: "Moduli",
     href: `/${workspaceSlug}/projects/${projectId}/modules`,
     Icon: DiceIcon,
     access: [EUserPermissions.ADMIN, EUserPermissions.MEMBER],
   },
   {
-    name: "Views",
+    name: "Visuali",
     href: `/${workspaceSlug}/projects/${projectId}/views`,
     Icon: Layers,
     access: [EUserPermissions.ADMIN, EUserPermissions.MEMBER, EUserPermissions.GUEST],
   },
   {
-    name: "Pages",
+    name: "Pagine",
     href: `/${workspaceSlug}/projects/${projectId}/pages`,
     Icon: FileText,
     access: [EUserPermissions.ADMIN, EUserPermissions.MEMBER, EUserPermissions.GUEST],
   },
   {
-    name: "Intake",
+    name: "Posta",
     href: `/${workspaceSlug}/projects/${projectId}/inbox`,
     Icon: Intake,
     access: [EUserPermissions.ADMIN, EUserPermissions.MEMBER, EUserPermissions.GUEST],

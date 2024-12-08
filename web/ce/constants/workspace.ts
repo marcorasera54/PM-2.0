@@ -7,7 +7,7 @@ import { EUserPermissions } from "./user-permissions";
 export const WORKSPACE_SETTINGS = {
   general: {
     key: "general",
-    label: "General",
+    label: "Generale",
     href: `/settings`,
     access: [EUserPermissions.ADMIN],
     highlight: (pathname: string, baseUrl: string) => pathname === `${baseUrl}/settings/`,
@@ -15,7 +15,7 @@ export const WORKSPACE_SETTINGS = {
   },
   members: {
     key: "members",
-    label: "Members",
+    label: "Membri",
     href: `/settings/members`,
     access: [EUserPermissions.ADMIN],
     highlight: (pathname: string, baseUrl: string) => pathname === `${baseUrl}/settings/members/`,
@@ -23,7 +23,7 @@ export const WORKSPACE_SETTINGS = {
   },
   "billing-and-plans": {
     key: "billing-and-plans",
-    label: "Billing and plans",
+    label: "Fatturazione e piani",
     href: `/settings/billing`,
     access: [EUserPermissions.ADMIN],
     highlight: (pathname: string, baseUrl: string) => pathname === `${baseUrl}/settings/billing/`,
@@ -31,26 +31,10 @@ export const WORKSPACE_SETTINGS = {
   },
   export: {
     key: "export",
-    label: "Exports",
+    label: "Esporta",
     href: `/settings/exports`,
     access: [EUserPermissions.ADMIN],
     highlight: (pathname: string, baseUrl: string) => pathname === `${baseUrl}/settings/exports/`,
-    Icon: SettingIcon,
-  },
-  webhooks: {
-    key: "webhooks",
-    label: "Webhooks",
-    href: `/settings/webhooks`,
-    access: [EUserPermissions.ADMIN],
-    highlight: (pathname: string, baseUrl: string) => pathname === `${baseUrl}/settings/webhooks/`,
-    Icon: SettingIcon,
-  },
-  "api-tokens": {
-    key: "api-tokens",
-    label: "API tokens",
-    href: `/settings/api-tokens`,
-    access: [EUserPermissions.ADMIN],
-    highlight: (pathname: string, baseUrl: string) => pathname === `${baseUrl}/settings/api-tokens/`,
     Icon: SettingIcon,
   },
 };
@@ -67,6 +51,4 @@ export const WORKSPACE_SETTINGS_LINKS: {
   WORKSPACE_SETTINGS["members"],
   WORKSPACE_SETTINGS["billing-and-plans"],
   WORKSPACE_SETTINGS["export"],
-  WORKSPACE_SETTINGS["webhooks"],
-  WORKSPACE_SETTINGS["api-tokens"],
 ];

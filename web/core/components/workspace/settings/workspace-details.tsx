@@ -188,10 +188,10 @@ export const WorkspaceDetails: FC = observer(() => {
                 {workspaceLogo && workspaceLogo !== "" ? (
                   <>
                     <Pencil className="h-3 w-3" />
-                    Edit logo
+                    Modifica logo
                   </>
                 ) : (
-                  "Upload logo"
+                  "Carica logo"
                 )}
               </button>
             )}
@@ -201,7 +201,7 @@ export const WorkspaceDetails: FC = observer(() => {
         <div className="my-8 flex flex-col gap-8">
           <div className="grid-col grid w-full grid-cols-1 items-center justify-between gap-10 xl:grid-cols-2 2xl:grid-cols-3">
             <div className="flex flex-col gap-1">
-              <h4 className="text-sm">Workspace name</h4>
+              <h4 className="text-sm">Nome dello spazio di lavoro</h4>
               <Controller
                 control={control}
                 name="name"
@@ -221,7 +221,7 @@ export const WorkspaceDetails: FC = observer(() => {
                     onChange={onChange}
                     ref={ref}
                     hasError={Boolean(errors.name)}
-                    placeholder="Name"
+                    placeholder="Nome"
                     className="w-full rounded-md font-medium"
                     disabled={!isAdmin}
                   />
@@ -230,7 +230,7 @@ export const WorkspaceDetails: FC = observer(() => {
             </div>
 
             <div className="flex flex-col gap-1 ">
-              <h4 className="text-sm">Company size</h4>
+              <h4 className="text-sm">Dimensione azienda</h4>
               <Controller
                 name="organization_size"
                 control={control}
@@ -238,7 +238,7 @@ export const WorkspaceDetails: FC = observer(() => {
                   <CustomSelect
                     value={value}
                     onChange={onChange}
-                    label={ORGANIZATION_SIZE.find((c) => c === value) ?? "Select organization size"}
+                    label={value === "Just myself" ? "Solo io" : (ORGANIZATION_SIZE.find((c) => c === value) ?? "Seleziona la dimensione dell'organizzazione")}
                     optionsClassName="w-full"
                     buttonClassName="!border-[0.5px] !border-custom-border-200 !shadow-none"
                     input
@@ -255,7 +255,7 @@ export const WorkspaceDetails: FC = observer(() => {
             </div>
 
             <div className="flex flex-col gap-1 ">
-              <h4 className="text-sm">Workspace URL</h4>
+              <h4 className="text-sm">URL dello spazio di lavoro</h4>
               <Controller
                 control={control}
                 name="url"
@@ -282,7 +282,7 @@ export const WorkspaceDetails: FC = observer(() => {
           {isAdmin && (
             <div className="flex items-center justify-between py-2">
               <Button variant="primary" onClick={handleSubmit(onSubmit)} loading={isLoading}>
-                {isLoading ? "Updating" : "Update workspace"}
+                {isLoading ? "Aggiornamento" : "Aggiorna spazio di lavoro"}
               </Button>
             </div>
           )}

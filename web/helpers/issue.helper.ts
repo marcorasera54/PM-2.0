@@ -213,8 +213,8 @@ export const formatTextList = (TextArray: string[]): string => {
 
 export const getDescriptionPlaceholder = (isFocused: boolean, description: string | undefined): string => {
   const isDescriptionEmpty = !description || description === "<p></p>" || description.trim() === "";
-  if (!isDescriptionEmpty || isFocused) return "Press '/' for commands...";
-  else return "Click to add description";
+  if (!isDescriptionEmpty || isFocused) return "Premi '/' per i comandi...";
+  else return "Clicca per aggiungere una descrizione";
 };
 
 export const issueCountBasedOnFilters = (

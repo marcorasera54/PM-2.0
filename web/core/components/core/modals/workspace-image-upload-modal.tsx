@@ -131,7 +131,7 @@ export const WorkspaceImageUploadModal: React.FC<Props> = observer((props) => {
               <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-custom-background-100 px-5 py-8 text-left shadow-custom-shadow-md transition-all sm:w-full sm:max-w-xl sm:p-6">
                 <div className="space-y-5">
                   <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-custom-text-100">
-                    Upload image
+                    Carica immagine
                   </Dialog.Title>
                   <div className="space-y-3">
                     <div className="flex items-center justify-center gap-3">
@@ -161,7 +161,7 @@ export const WorkspaceImageUploadModal: React.FC<Props> = observer((props) => {
                           <div>
                             <UserCircle2 className="mx-auto h-16 w-16 text-custom-text-200" />
                             <span className="mt-2 block text-sm font-medium text-custom-text-200">
-                              {isDragActive ? "Drop image here to upload" : "Drag & drop image here"}
+                              {isDragActive ? "Trascina e rilascia l'immagine qui per caricarla" : "Trascina e rilascia l'immagine qui"}
                             </span>
                           </div>
                         )}
@@ -178,14 +178,14 @@ export const WorkspaceImageUploadModal: React.FC<Props> = observer((props) => {
                     )}
                   </div>
                 </div>
-                <p className="my-4 text-sm text-custom-text-200">File formats supported- .jpeg, .jpg, .png, .webp</p>
+                <p className="my-4 text-sm text-custom-text-200 mt-2 mb-2">Formati supportati - .jpeg, .jpg, .png, .webp</p>
                 <div className="flex items-center justify-between">
                   <Button variant="danger" size="sm" onClick={handleImageRemove} disabled={!value} loading={isRemoving}>
-                    {isRemoving ? "Removing" : "Remove"}
+                    {isRemoving ? "Rimozione" : "Rimuovi"}
                   </Button>
                   <div className="flex items-center gap-2">
                     <Button variant="neutral-primary" size="sm" onClick={handleClose}>
-                      Cancel
+                      Annulla
                     </Button>
                     <Button
                       variant="primary"
@@ -194,7 +194,7 @@ export const WorkspaceImageUploadModal: React.FC<Props> = observer((props) => {
                       disabled={!image}
                       loading={isImageUploading}
                     >
-                      {isImageUploading ? "Uploading" : "Upload & Save"}
+                      {isImageUploading ? "Caricamento in corso" : "Carica & Salva"}
                     </Button>
                   </div>
                 </div>

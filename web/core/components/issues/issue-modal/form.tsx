@@ -87,10 +87,10 @@ export const IssueFormRoot: FC<IssueFormProps> = observer((props) => {
     onCreateMoreToggleChange,
     isDraft,
     moveToIssue,
-    modalTitle = `${data?.id ? "Update" : isDraft ? "Create a draft" : "Create new issue"}`,
+    modalTitle = `${data?.id ? "Update" : isDraft ? "Crea una bozza" : "Crea nuova task"}`,
     primaryButtonText = {
-      default: `${data?.id ? "Update" : isDraft ? "Save to Drafts" : "Save"}`,
-      loading: `${data?.id ? "Updating" : "Saving"}`,
+      default: `${data?.id ? "Update" : isDraft ? "Salva come bozza" : "Salva"}`,
+      loading: `${data?.id ? "Aggiornamento" : "Salvataggio"}`,
     },
     isDuplicateModalOpen,
     handleDuplicateIssueModal,
@@ -455,7 +455,7 @@ export const IssueFormRoot: FC<IssueFormProps> = observer((props) => {
                     role="button"
                   >
                     <ToggleSwitch value={isCreateMoreToggleEnabled} onChange={() => {}} size="sm" />
-                    <span className="text-xs">Create more</span>
+                    <span className="text-xs">Crea di più</span>
                   </div>
                 )}
                 <div className="flex items-center gap-2">
@@ -475,7 +475,7 @@ export const IssueFormRoot: FC<IssueFormProps> = observer((props) => {
                     }}
                     tabIndex={getIndex("discard_button")}
                   >
-                    Discard
+                    Scarta
                   </Button>
                   <Button
                     variant={moveToIssue ? "neutral-primary" : "primary"}
@@ -502,7 +502,7 @@ export const IssueFormRoot: FC<IssueFormProps> = observer((props) => {
                         }
                       }}
                     >
-                      Add to project
+                      Aggiungi al progetto
                     </Button>
                   )}
                 </div>

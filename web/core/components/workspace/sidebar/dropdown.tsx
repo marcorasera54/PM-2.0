@@ -286,7 +286,7 @@ export const SidebarDropdown = observer(() => {
                   <Menu.Item as="div">
                     <span className="flex w-full items-center gap-2 rounded px-2 py-1 hover:bg-custom-sidebar-background-80">
                       <Settings className="h-4 w-4 stroke-[1.5]" />
-                      <span>Settings</span>
+                      <span>Impostazioni</span>
                     </span>
                   </Menu.Item>
                 </Link>
@@ -299,7 +299,7 @@ export const SidebarDropdown = observer(() => {
                   onClick={handleSignOut}
                 >
                   <LogOut className="size-4 stroke-[1.5]" />
-                  Sign out
+                  Esci
                 </Menu.Item>
               </div>
               {isUserInstanceAdmin && (

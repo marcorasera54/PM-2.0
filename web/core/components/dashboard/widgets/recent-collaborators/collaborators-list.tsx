@@ -44,10 +44,10 @@ const CollaboratorListItem: React.FC<CollaboratorListItemProps> = observer((prop
         />
       </div>
       <h6 className="mt-6 truncate text-xs font-semibold group-hover:underline">
-        {isCurrentUser ? "You" : userDetails?.display_name}
+        {isCurrentUser ? "Tu" : userDetails?.display_name}
       </h6>
       <p className="mt-2 text-sm">
-        {issueCount} active issue{issueCount > 1 ? "s" : ""}
+        {issueCount} task{issueCount > 1 ? "s" : ""} attiv{issueCount > 1 ? "e" : "a"}
       </p>
     </Link>
   );

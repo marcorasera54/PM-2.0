@@ -46,16 +46,16 @@ export const ProfileActivity = observer(() => {
             <div className="space-y-5">
               {userProfileActivity.results.map((activity) => (
                 <div key={activity.id} className="flex gap-3">
-                  <div className="flex-shrink-0 grid place-items-center overflow-hidden rounded h-6 w-6">
+                  <div className="flex-shrink-0 grid place-items-center overflow-hidden rounded-full h-6 w-6">
                     {activity.actor_detail?.avatar_url && activity.actor_detail?.avatar_url !== "" ? (
                       <img
                         src={getFileURL(activity.actor_detail?.avatar_url)}
                         alt={activity.actor_detail?.display_name}
-                        className="rounded"
+                        className="rounded-full"
                       />
                     ) : (
-                      <div className="grid h-6 w-6 place-items-center rounded border-2 bg-gray-700 text-xs text-white">
-                        {activity.actor_detail?.display_name?.charAt(0)}
+                      <div className="grid h-6 w-6 place-items-center rounded-full bg-gray-700 text-xs text-white font-medium">
+                        {activity.actor_detail?.display_name?.charAt(0).toUpperCase()}
                       </div>
                     )}
                   </div>

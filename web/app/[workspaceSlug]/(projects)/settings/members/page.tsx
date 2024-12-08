@@ -107,12 +107,12 @@ const WorkspaceMembersSettingsPage = observer(() => {
         })}
       >
         <div className="flex justify-between gap-4 pb-3.5 items-start	">
-          <h4 className="text-xl font-medium">Members</h4>
+          <h4 className="text-xl font-medium">Membri</h4>
           <div className="ml-auto flex items-center gap-1.5 rounded-md border border-custom-border-200 bg-custom-background-100 px-2.5 py-1.5">
             <Search className="h-3.5 w-3.5 text-custom-text-400" />
             <input
               className="w-full max-w-[234px] border-none bg-transparent text-sm outline-none placeholder:text-custom-text-400"
-              placeholder="Search..."
+              placeholder="Cerca..."
               value={searchQuery}
               autoFocus
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -120,7 +120,7 @@ const WorkspaceMembersSettingsPage = observer(() => {
           </div>
           {canPerformWorkspaceAdminActions && (
             <Button variant="primary" size="sm" onClick={() => setInviteModal(true)}>
-              Add member
+              Aggiungi membro
             </Button>
           )}
         </div>

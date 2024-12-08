@@ -76,7 +76,7 @@ export const NameColumn: React.FC<NameProps> = (props) => {
                     className="flex items-center gap-x-3 cursor-pointer"
                     onClick={() => setRemoveMemberModal(rowData)}
                   >
-                    <Trash2 className="size-3.5 align-middle" /> {id === currentUser?.id ? "Leave " : "Remove "}
+                    <Trash2 className="size-3.5 align-middle" /> {id === currentUser?.id ? "Lascia " : "Rimuovi "}
                   </div>
                 )}
               />

@@ -17,7 +17,7 @@ export const useMemberColumns = () => {
     const date = new Date(dateStr);
 
     const options: Intl.DateTimeFormatOptions = { year: "numeric", month: "long", day: "numeric" };
-    return date.toLocaleDateString("en-US", options);
+    return date.toLocaleDateString("it-IT", options);
   };
 
   // derived values
@@ -25,8 +25,8 @@ export const useMemberColumns = () => {
 
   const columns = [
     {
-      key: "Full name",
-      content: "Full name",
+      key: "Nome completo",
+      content: "Nome completo",
       thClassName: "text-left",
       tdRender: (rowData: RowData) => (
         <NameColumn
@@ -40,34 +40,34 @@ export const useMemberColumns = () => {
     },
 
     {
-      key: "Display name",
-      content: "Display name",
+      key: "Nome visualizzato",
+      content: "Nome visualizzato",
       tdRender: (rowData: RowData) => <div className="w-32">{rowData.member.display_name}</div>,
     },
 
     {
-      key: "Email address",
-      content: "Email address",
+      key: "Indirizzo email",
+      content: "Indirizzo email",
       tdRender: (rowData: RowData) => <div className="w-48 truncate">{rowData.member.email}</div>,
     },
 
     {
-      key: "Account type",
-      content: "Account type",
+      key: "Tipo dii account",
+      content: "Tipo dii account",
       tdRender: (rowData: RowData) => <AccountTypeColumn rowData={rowData} workspaceSlug={workspaceSlug as string} />,
     },
 
     {
-      key: "Authentication",
-      content: "Authentication",
+      key: "Autenticazione",
+      content: "Autenticazione",
       tdRender: (rowData: RowData) => (
         <div className="capitalize">{rowData.member.last_login_medium?.replace("-", " ")}</div>
       ),
     },
 
     {
-      key: "Joining date",
-      content: "Joining date",
+      key: "Data di iscrizione",
+      content: "Data di iscrizione",
       tdRender: (rowData: RowData) => <div>{getFormattedDate(rowData?.member?.joining_date || "")}</div>,
     },
   ];

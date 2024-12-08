@@ -18,7 +18,7 @@ export const CommandPaletteHelpActions: React.FC<Props> = observer((props) => {
   const { toggleIntercom } = useTransient();
 
   return (
-    <Command.Group heading="Help">
+    <Command.Group heading="Aiuto">
       <Command.Item
         onSelect={() => {
           closePalette();
@@ -28,7 +28,7 @@ export const CommandPaletteHelpActions: React.FC<Props> = observer((props) => {
       >
         <div className="flex items-center gap-2 text-custom-text-200">
           <Rocket className="h-3.5 w-3.5" />
-          Open keyboard shortcuts
+          Apri la tastiera dei comandi rapidi
         </div>
       </Command.Item>
     </Command.Group>

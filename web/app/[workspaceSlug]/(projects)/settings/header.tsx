@@ -27,7 +27,7 @@ export const WorkspaceSettingHeader: FC = observer(() => {
               />
             }
           />
-          <Breadcrumbs.BreadcrumbItem type="text" link={<BreadcrumbLink label="Settings" />} />
+          <Breadcrumbs.BreadcrumbItem type="text" link={<BreadcrumbLink label="Impostazioni" />} />
         </Breadcrumbs>
       </Header.LeftItem>
     </Header>

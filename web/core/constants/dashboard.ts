@@ -260,7 +260,7 @@ export const SIDEBAR_WORKSPACE_MENU_ITEMS: {
 }[] = [
   {
     key: "projects",
-    label: "Projects",
+    label: "Progetti",
     href: `/projects`,
     access: [EUserPermissions.ADMIN, EUserPermissions.MEMBER, EUserPermissions.GUEST],
     highlight: (pathname: string, baseUrl: string) => pathname === `${baseUrl}/projects/`,
@@ -268,7 +268,7 @@ export const SIDEBAR_WORKSPACE_MENU_ITEMS: {
   },
   {
     key: "all-issues",
-    label: "Views",
+    label: "Visuali",
     href: `/workspace-views/all-issues`,
     access: [EUserPermissions.ADMIN, EUserPermissions.MEMBER, EUserPermissions.GUEST],
     highlight: (pathname: string, baseUrl: string) => pathname.includes(`${baseUrl}/workspace-views/`),
@@ -276,7 +276,7 @@ export const SIDEBAR_WORKSPACE_MENU_ITEMS: {
   },
   {
     key: "analytics",
-    label: "Analytics",
+    label: "Analitiche",
     href: `/analytics`,
     access: [EUserPermissions.ADMIN, EUserPermissions.MEMBER],
     highlight: (pathname: string, baseUrl: string) => pathname.includes(`${baseUrl}/analytics/`),

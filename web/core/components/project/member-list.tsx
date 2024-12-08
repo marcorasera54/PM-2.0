@@ -72,7 +72,7 @@ export const ProjectMemberList: React.FC = observer(() => {
           {searchedMembers.length !== 0 && <ProjectMemberListItem memberDetails={memberDetails ?? []} />}
 
           {searchedMembers.length === 0 && (
-            <h4 className="text-sm mt-16 text-center text-custom-text-400">No matching members</h4>
+            <h4 className="text-sm mt-16 text-center text-custom-text-400">Nessun membro corrispondente</h4>
           )}
         </div>
       )}

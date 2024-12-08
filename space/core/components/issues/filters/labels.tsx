@@ -67,7 +67,7 @@ export const FilterLabels: React.FC<Props> = (props) => {
                 )}
               </>
             ) : (
-              <p className="text-xs italic text-custom-text-400">No matches found</p>
+              <p className="text-xs italic text-custom-text-400">Nessuna corrispondenza trovata</p>
             )
           ) : (
             <Loader className="space-y-2">

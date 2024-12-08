@@ -8,7 +8,6 @@ import { ContentWrapper, getButtonStyling } from "@plane/ui";
 // components
 import { ProIcon } from "@/components/common";
 // constants
-import { MARKETING_PRICING_PAGE_LINK } from "@/constants/common";
 import { WORKSPACE_ACTIVE_CYCLES_DETAILS } from "@/constants/cycle";
 // helper
 import { cn } from "@/helpers/common.helper";
@@ -37,17 +36,6 @@ export const WorkspaceActiveCyclesUpgrade = observer(() => {
             <p className="text-base font-medium text-custom-text-300">
               Monitor cycles across projects, track high-priority issues, and zoom in cycles that need attention.
             </p>
-          </div>
-          <div className="flex items-center gap-3">
-            <a
-              className={`${getButtonStyling("primary", "md")} cursor-pointer`}
-              href={MARKETING_PRICING_PAGE_LINK}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <ProIcon className="h-3.5 w-3.5 text-white" />
-              Upgrade
-            </a>
           </div>
           <span className="absolute left-0 top-0">
             <Image

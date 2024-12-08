@@ -202,7 +202,7 @@ export const CustomSearchSelect = (props: ICustomSearchSelectProps) => {
                             </Combobox.Option>
                           ))
                         ) : (
-                          <p className="text-custom-text-400 italic py-1 px-1.5">No matches found</p>
+                          <p className="text-custom-text-400 italic py-1 px-1.5">Nessuna corrispondenza trovata</p>
                         )
                       ) : (
                         <p className="text-custom-text-400 italic py-1 px-1.5">Loading...</p>

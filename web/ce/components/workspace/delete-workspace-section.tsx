@@ -34,19 +34,19 @@ export const DeleteWorkspaceSection: FC<TDeleteWorkspace> = observer((props) => 
             buttonClassName="flex w-full items-center justify-between py-4"
             title={
               <>
-                <span className="text-lg tracking-tight">Delete workspace</span>
+                <span className="text-lg tracking-tight">Rimuovi spazio di lavoro</span>
                 {isOpen ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
               </>
             }
           >
             <div className="flex flex-col gap-4">
               <span className="text-base tracking-tight">
-                When deleting a workspace, all of the data and resources within that workspace will be permanently
-                removed and cannot be recovered.
+                Quando elimini uno spazio di lavoro, tutti i dati e le risorse all'interno di quello spazio verranno
+                rimossi permanentemente e non potranno essere recuperati.
               </span>
               <div>
                 <Button variant="danger" onClick={() => setDeleteWorkspaceModal(true)}>
-                  Delete my workspace
+                  Elimina il mio spazio di lavoro
                 </Button>
               </div>
             </div>

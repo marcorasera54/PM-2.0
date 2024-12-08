@@ -64,23 +64,23 @@ export const IMPORTERS_LIST = [
 export const EXPORTERS_LIST = [
   {
     provider: "csv",
-    type: "export",
+    type: "esporta",
     title: "CSV",
-    description: "Export issues to a CSV file.",
+    description: "Esporta le tasks in un file CSV.",
     logo: CSVLogo,
   },
   {
     provider: "xlsx",
-    type: "export",
+    type: "esporta",
     title: "Excel",
-    description: "Export issues to a Excel file.",
+    description: "Esporta le tasks in un file Excel.",
     logo: ExcelLogo,
   },
   {
     provider: "json",
-    type: "export",
+    type: "esporta",
     title: "JSON",
-    description: "Export issues to a JSON file.",
+    description: "Esporta le tasks in un file JSON.",
     logo: JSONLogo,
   },
 ];

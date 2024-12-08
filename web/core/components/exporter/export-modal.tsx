@@ -131,7 +131,7 @@ export const Exporter: React.FC<Props> = observer((props) => {
                   <div className="flex w-full items-center justify-start gap-6">
                     <span className="flex items-center justify-start">
                       <h3 className="text-xl font-medium 2xl:text-2xl">
-                        Export to{" "}
+                        Esporta come {" "}
                         {provider === "csv" ? "CSV" : provider === "xlsx" ? "Excel" : provider === "json" ? "JSON" : ""}
                       </h3>
                     </span>
@@ -151,7 +151,7 @@ export const Exporter: React.FC<Props> = observer((props) => {
                                 return projectDetails?.identifier;
                               })
                               .join(", ")
-                          : "All projects"
+                          : "Tutti i progetti"
                       }
                       onOpen={() => setIsSelectOpen(true)}
                       onClose={() => setIsSelectOpen(false)}
@@ -165,11 +165,11 @@ export const Exporter: React.FC<Props> = observer((props) => {
                     className="flex max-w-min cursor-pointer items-center gap-2"
                   >
                     <input type="checkbox" checked={multiple} onChange={() => setMultiple(!multiple)} />
-                    <div className="whitespace-nowrap text-sm">Export the data into separate files</div>
+                    <div className="whitespace-nowrap text-sm">Esporta i dati in file separati.</div>
                   </div>
                   <div className="flex justify-end gap-2">
                     <Button variant="neutral-primary" size="sm" onClick={handleClose}>
-                      Cancel
+                      Annulla
                     </Button>
                     <Button
                       variant="primary"
@@ -178,7 +178,7 @@ export const Exporter: React.FC<Props> = observer((props) => {
                       disabled={exportLoading}
                       loading={exportLoading}
                     >
-                      {exportLoading ? "Exporting..." : "Export"}
+                      {exportLoading ? "Esportazione in corso..." : "Esporta"}
                     </Button>
                   </div>
                 </div>

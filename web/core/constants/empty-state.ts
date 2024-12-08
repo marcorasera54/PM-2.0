@@ -239,9 +239,9 @@ const emptyStateDetails = {
   },
   [EmptyStateType.WORKSPACE_SETTINGS_EXPORT]: {
     key: EmptyStateType.WORKSPACE_SETTINGS_EXPORT,
-    title: "No previous exports yet",
-    description: "Anytime you export, you will also have a copy here for reference.",
-    path: "/empty-state/workspace-settings/exports",
+    title: "Nessuna esportazione precedente",
+    description: "Ogni volta che esporti, avrai anche una copia qui per riferimento.",
+    path: "",
   },
   [EmptyStateType.WORKSPACE_SETTINGS_IMPORT]: {
     key: EmptyStateType.WORKSPACE_SETTINGS_IMPORT,

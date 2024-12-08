@@ -30,7 +30,7 @@ export const IssueTitleInput: React.FC<TIssueTitleInputProps> = observer((props)
 
   const validateWhitespace = (value: string) => {
     if (value.trim() === "") {
-      return "Title is required";
+      return "Titolo richiesto";
     }
     return undefined;
   };
@@ -41,10 +41,10 @@ export const IssueTitleInput: React.FC<TIssueTitleInputProps> = observer((props)
         name="name"
         rules={{
           validate: validateWhitespace,
-          required: "Title is required",
+          required: "Titolo richiesto",
           maxLength: {
             value: 255,
-            message: "Title should be less than 255 characters",
+            message: "Il titolo deve essere inferiore a 255 caratteri",
           },
         }}
         render={({ field: { value, onChange, ref } }) => (
@@ -59,7 +59,7 @@ export const IssueTitleInput: React.FC<TIssueTitleInputProps> = observer((props)
             }}
             ref={issueTitleRef || ref}
             hasError={Boolean(errors.name)}
-            placeholder="Title"
+            placeholder="Titolo"
             className="w-full text-base"
             tabIndex={getIndex("name")}
             autoFocus

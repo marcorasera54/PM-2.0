@@ -92,7 +92,7 @@ export const SidebarQuickActions = observer(() => {
           disabled={disabled}
         >
           <PenSquare className="size-4" />
-          {!isSidebarCollapsed && <span className="text-sm font-medium">New issue</span>}
+          {!isSidebarCollapsed && <span className="text-sm font-medium">Nuova Task</span>}
         </button>
         <button
           className={cn(

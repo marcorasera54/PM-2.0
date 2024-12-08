@@ -72,7 +72,7 @@ export const FilterCreatedDate: React.FC<Props> = observer((props) => {
               />
             </>
           ) : (
-            <p className="text-xs italic text-custom-text-400">No matches found</p>
+            <p className="text-xs italic text-custom-text-400">Nessuna corrispondenza trovata</p>
           )}
         </div>
       )}

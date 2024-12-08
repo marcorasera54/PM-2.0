@@ -75,18 +75,18 @@ export const RecentActivityWidget: React.FC<WidgetProps> = observer((props) => {
               <div className="-mt-2 break-words">
                 <p className="inline text-sm text-custom-text-200">
                   <span className="font-medium text-custom-text-100">
-                    {currentUser?.id === activity.actor_detail.id ? "You" : activity.actor_detail?.display_name}{" "}
+                    {activity.actor_detail?.display_name}{" "}
                   </span>
                   {activity.field ? (
                     <ActivityMessage activity={activity} showIssue />
                   ) : (
                     <span>
-                      created <IssueLink activity={activity} />
+                      ha creato <IssueLink activity={activity} />
                     </span>
                   )}
                 </p>
                 <p className="text-xs text-custom-text-200 whitespace-nowrap">
-                  {calculateTimeAgo(activity.created_at)}
+                 {calculateTimeAgo(activity.created_at)}
                 </p>
               </div>
             </div>

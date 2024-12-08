@@ -526,6 +526,7 @@ def dashboard_created_issues(self, request, slug):
 
 def dashboard_issues_by_state_groups(self, request, slug):
     filters = issue_filters(request.query_params, "GET")
+    # state_order = ["da fare", "non iniziato", "iniziato", "completato", "cancellato"]
     state_order = ["backlog", "unstarted", "started", "completed", "cancelled"]
     extra_filters = {}
 

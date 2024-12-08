@@ -52,7 +52,7 @@ export const CommandModal: React.FC = observer(() => {
   const { isMobile } = usePlatformOS();
   const { canPerformAnyCreateAction } = useUser();
   // states
-  const [placeholder, setPlaceholder] = useState("Type a command or search...");
+  const [placeholder, setPlaceholder] = useState("Digita un comando o cerca...");
   const [resultsCount, setResultsCount] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
@@ -198,7 +198,7 @@ export const CommandModal: React.FC = observer(() => {
                       if (e.key === "Escape" || (e.key === "Backspace" && !searchTerm)) {
                         e.preventDefault();
                         setPages((pages) => pages.slice(0, -1));
-                        setPlaceholder("Type a command or search...");
+                        setPlaceholder("Digita un comando o cerca...");
                       }
                     }}
                   >
@@ -304,7 +304,7 @@ export const CommandModal: React.FC = observer(() => {
                             workspaceProjectIds &&
                             workspaceProjectIds.length > 0 &&
                             canPerformAnyCreateAction && (
-                              <Command.Group heading="Issue">
+                              <Command.Group heading="Task">
                                 <Command.Item
                                   onSelect={() => {
                                     closePalette();
@@ -315,14 +315,14 @@ export const CommandModal: React.FC = observer(() => {
                                 >
                                   <div className="flex items-center gap-2 text-custom-text-200">
                                     <LayersIcon className="h-3.5 w-3.5" />
-                                    Create new issue
+                                    Crea una nuova task
                                   </div>
                                   <kbd>C</kbd>
                                 </Command.Item>
                               </Command.Group>
                             )}
                           {workspaceSlug && canPerformWorkspaceActions && (
-                            <Command.Group heading="Project">
+                            <Command.Group heading="Progetto">
                               <Command.Item
                                 onSelect={() => {
                                   closePalette();
@@ -333,7 +333,7 @@ export const CommandModal: React.FC = observer(() => {
                               >
                                 <div className="flex items-center gap-2 text-custom-text-200">
                                   <FolderPlus className="h-3.5 w-3.5" />
-                                  Create new project
+                                  Crea un nuovo progetto
                                 </div>
                                 <kbd>P</kbd>
                               </Command.Item>
@@ -345,7 +345,7 @@ export const CommandModal: React.FC = observer(() => {
                             <CommandPaletteProjectActions closePalette={closePalette} />
                           )}
                           {canPerformWorkspaceActions && (
-                            <Command.Group heading="Workspace Settings">
+                            <Command.Group heading="Impostazioni dello spazio di lavoro">
                               <Command.Item
                                 onSelect={() => {
                                   setPlaceholder("Search workspace settings...");
@@ -356,7 +356,7 @@ export const CommandModal: React.FC = observer(() => {
                               >
                                 <div className="flex items-center gap-2 text-custom-text-200">
                                   <Settings className="h-3.5 w-3.5" />
-                                  Search settings...
+                                  Cerca impostazioni...
                                 </div>
                               </Command.Item>
                             </Command.Group>
@@ -365,7 +365,7 @@ export const CommandModal: React.FC = observer(() => {
                             <Command.Item onSelect={createNewWorkspace} className="focus:outline-none">
                               <div className="flex items-center gap-2 text-custom-text-200">
                                 <FolderPlus className="h-3.5 w-3.5" />
-                                Create new workspace
+                                Crea un nuovo spazio di lavoro
                               </div>
                             </Command.Item>
                             <Command.Item
@@ -378,7 +378,7 @@ export const CommandModal: React.FC = observer(() => {
                             >
                               <div className="flex items-center gap-2 text-custom-text-200">
                                 <Settings className="h-3.5 w-3.5" />
-                                Change interface theme...
+                                Cambia tema dell'interfaccia...
                               </div>
                             </Command.Item>
                           </Command.Group>

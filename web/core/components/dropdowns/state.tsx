@@ -244,7 +244,7 @@ export const StateDropdown: React.FC<Props> = observer((props) => {
                     </Combobox.Option>
                   ))
                 ) : (
-                  <p className="px-1.5 py-1 italic text-custom-text-400">No matches found</p>
+                  <p className="px-1.5 py-1 italic text-custom-text-400">Nessuna corrispondenza trovata</p>
                 )
               ) : (
                 <p className="px-1.5 py-1 italic text-custom-text-400">Loading...</p>
