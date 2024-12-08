@@ -70,15 +70,15 @@ export const DeleteWorkspaceModal: React.FC<Props> = observer((props) => {
         });
         setToast({
           type: TOAST_TYPE.SUCCESS,
-          title: "Success!",
-          message: "Workspace deleted successfully.",
+          title: "Successo!",
+          message: "Spazio di lavoro eliminato con successo.",
         });
       })
       .catch(() => {
         setToast({
           type: TOAST_TYPE.ERROR,
-          title: "Error!",
-          message: "Something went wrong. Please try again later.",
+          title: "Errore!",
+          message: "Qualcosa è andato storto. Per favore, riprova.",
         });
         captureWorkspaceEvent({
           eventName: WORKSPACE_DELETED,

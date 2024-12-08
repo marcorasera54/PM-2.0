@@ -136,7 +136,7 @@ const IntegrationGuide = observer(() => {
                   }`}
                 >
                   <MoveLeft className="h-4 w-4" />
-                  <div className="pr-1">Precedente</div>
+                  <div className="pr-1 pl-1">Precedente</div>
                 </button>
                 <button
                   disabled={!exporterServices?.next_page_results}
@@ -147,7 +147,7 @@ const IntegrationGuide = observer(() => {
                       : "cursor-not-allowed opacity-75"
                   }`}
                 >
-                  <div className="pl-1">Successivo</div>
+                  <div className="pl-1 pr-1">Successivo</div>
                   <MoveRight className="h-4 w-4" />
                 </button>
               </div>

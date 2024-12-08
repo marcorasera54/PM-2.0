@@ -72,8 +72,8 @@ const UserInvitationsPage = observer(() => {
     if (invitationsRespond.length === 0) {
       setToast({
         type: TOAST_TYPE.ERROR,
-        title: "Error!",
-        message: "Please select at least one invitation.",
+        title: "Errore!",
+        message: "Per favore seleziona almeno un invito.",
       });
       return;
     }
@@ -107,8 +107,8 @@ const UserInvitationsPage = observer(() => {
           .catch(() => {
             setToast({
               type: TOAST_TYPE.ERROR,
-              title: "Error!",
-              message: "Something went wrong, Please try again.",
+              title: "Errore!",
+              message: "Qualcosa è andato storto. Per favore, riprova.",
             });
             setIsJoiningWorkspaces(false);
           });
@@ -122,8 +122,8 @@ const UserInvitationsPage = observer(() => {
         });
         setToast({
           type: TOAST_TYPE.ERROR,
-          title: "Error!",
-          message: "Something went wrong, Please try again.",
+          title: "Errore!",
+          message: "Qualcosa è andato storto. Per favore, riprova.",
         });
         setIsJoiningWorkspaces(false);
       });
@@ -149,8 +149,8 @@ const UserInvitationsPage = observer(() => {
           invitations.length > 0 ? (
             <div className="relative flex h-full justify-center px-8 pb-8 sm:w-10/12 sm:items-center sm:justify-start sm:p-0 sm:pr-[8.33%] md:w-9/12 lg:w-4/5">
               <div className="w-full space-y-10">
-                <h5 className="text-lg">We see that someone has invited you to</h5>
-                <h4 className="text-2xl font-semibold">Join a workspace</h4>
+                <h5 className="text-lg">Abbiamo visto che qualcuno ti ha invitato a</h5>
+                <h4 className="text-2xl font-semibold">Unisciti allo spazio di lavoro</h4>
                 <div className="max-h-[37vh] space-y-4 overflow-y-auto md:w-3/5">
                   {invitations.map((invitation) => {
                     const isSelected = invitationsRespond.includes(invitation.id);
@@ -204,12 +204,12 @@ const UserInvitationsPage = observer(() => {
                     disabled={isJoiningWorkspaces || invitationsRespond.length === 0}
                     loading={isJoiningWorkspaces}
                   >
-                    Accept & Join
+                    Accetta & Unisciti
                   </Button>
                   <Link href={`/${redirectWorkspaceSlug}`}>
                     <span>
                       <Button variant="neutral-primary" size="md">
-                        Go Home
+                        Vai alla Home
                       </Button>
                     </span>
                   </Link>
@@ -219,11 +219,11 @@ const UserInvitationsPage = observer(() => {
           ) : (
             <div className="fixed left-0 top-0 grid h-full w-full place-items-center">
               <EmptyState
-                title="No pending invites"
-                description="You can see here if someone invites you to a workspace."
+                title="Nessun invito in sospeso"
+                description="Qui puoi vedere se qualcuno ti ha invitato a uno spazio di lavoro."
                 image={emptyInvitation}
                 primaryButton={{
-                  text: "Back to home",
+                  text: "Torna alla home",
                   onClick: () => router.push("/"),
                 }}
               />

@@ -95,7 +95,7 @@ class WorkspaceInvitationsViewset(BaseViewSet):
         if workspace_members:
             return Response(
                 {
-                    "error": "Some users are already member of workspace",
+                    "error": "Alcuni utenti sono già membri dello spazio di lavoro",
                     "workspace_users": WorkSpaceMemberSerializer(
                         workspace_members, many=True
                     ).data,

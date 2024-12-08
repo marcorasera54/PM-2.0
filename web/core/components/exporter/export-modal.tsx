@@ -77,18 +77,18 @@ export const Exporter: React.FC<Props> = observer((props) => {
           setExportLoading(false);
           setToast({
             type: TOAST_TYPE.SUCCESS,
-            title: "Export Successful",
-            message: `You will be able to download the exported ${
+            title: "Esportazione riuscita",
+            message: `Sarà possibile scaricare il file esportato ${
               provider === "csv" ? "CSV" : provider === "xlsx" ? "Excel" : provider === "json" ? "JSON" : ""
-            } from the previous export.`,
+            } dall'esportazione precedente.`,
           });
         })
         .catch(() => {
           setExportLoading(false);
           setToast({
             type: TOAST_TYPE.ERROR,
-            title: "Error!",
-            message: "Export was unsuccessful. Please try again.",
+            title: "Errore!",
+            message: "L'esportazione non è riuscita. Per favore, riprova.",
           });
         });
     }

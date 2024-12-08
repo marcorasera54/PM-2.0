@@ -34,7 +34,7 @@ const CollaboratorListItem: React.FC<CollaboratorListItemProps> = observer((prop
 
   return (
     <Link href={`/${workspaceSlug}/profile/${userId}`} className="group text-center">
-      <div className="flex justify-center">
+      <div className="flex justify-center space-y-1">
         <Avatar
           src={getFileURL(userDetails.avatar_url)}
           name={userDetails.display_name}

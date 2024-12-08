@@ -61,8 +61,8 @@ const WorkspaceMembersSettingsPage = observer(() => {
         });
         setToast({
           type: TOAST_TYPE.SUCCESS,
-          title: "Success!",
-          message: "Invitations sent successfully.",
+          title: "Successo!",
+          message: "Inviti inviati con successo.",
         });
       })
       .catch((err) => {
@@ -79,8 +79,8 @@ const WorkspaceMembersSettingsPage = observer(() => {
         });
         setToast({
           type: TOAST_TYPE.ERROR,
-          title: "Error!",
-          message: `${err.error ?? "Something went wrong. Please try again."}`,
+          title: "Errore!",
+          message: `${err.error ?? "Qualcosa è andato storto. Per favore, riprova."}`,
         });
       });
   };

@@ -28,7 +28,7 @@ export const EmptyState: React.FC<Props> = ({
   disabled = false,
 }) => (
   <div className={`flex h-full w-full items-center justify-center`}>
-    <div className="flex w-full flex-col items-center text-center">
+    <div className="flex w-full flex-col items-center text-center space-y-2">
       <Image src={image} className="w-52 sm:w-60" alt={primaryButton?.text || "button image"} />
       <h6 className="mb-3 mt-6 text-xl font-semibold sm:mt-8">{title}</h6>
       {description && <p className="mb-7 px-5 text-custom-text-300 sm:mb-8">{description}</p>}

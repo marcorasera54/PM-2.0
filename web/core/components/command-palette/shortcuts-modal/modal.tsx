@@ -52,7 +52,7 @@ export const ShortcutsModal: FC<Props> = (props) => {
               <Dialog.Panel className="relative flex h-full items-center justify-center">
                 <div className="flex h-[61vh] w-full flex-col  space-y-4 overflow-hidden rounded-lg bg-custom-background-100 p-5 shadow-custom-shadow-md transition-all sm:w-[28rem]">
                   <Dialog.Title as="h3" className="flex justify-between">
-                    <span className="text-lg font-medium">Keyboard shortcuts</span>
+                    <span className="text-lg font-medium">Scorciatoie da tastiera</span>
                     <button type="button" onClick={handleClose}>
                       <X className="h-4 w-4 text-custom-text-200 hover:text-custom-text-100" aria-hidden="true" />
                     </button>
@@ -65,7 +65,7 @@ export const ShortcutsModal: FC<Props> = (props) => {
                       type="text"
                       value={query}
                       onChange={(e) => setQuery(e.target.value)}
-                      placeholder="Search for shortcuts"
+                      placeholder="Cerca scorciatoie"
                       className="w-full border-none bg-transparent py-1 text-xs text-custom-text-200 outline-none"
                       autoFocus
                       tabIndex={1}

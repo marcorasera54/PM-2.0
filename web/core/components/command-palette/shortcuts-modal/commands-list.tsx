@@ -15,24 +15,24 @@ export const ShortcutCommandsList: React.FC<Props> = (props) => {
   const KEYBOARD_SHORTCUTS = [
     {
       key: "navigation",
-      title: "Navigation",
-      shortcuts: [{ keys: "Ctrl,K", description: "Open command menu" }],
+      title: "Navigazione",
+      shortcuts: [{ keys: "Ctrl,K", description: "Apri menu dei comandi" }],
     },
     {
       key: "common",
-      title: "Common",
+      title: "Comuni",
       shortcuts: [
-        { keys: "P", description: "Create project" },
-        { keys: "C", description: "Create issue" },
-        { keys: "Q", description: "Create cycle" },
-        { keys: "M", description: "Create module" },
-        { keys: "V", description: "Create view" },
-        { keys: "D", description: "Create page" },
-        { keys: "Delete", description: "Bulk delete issues" },
-        { keys: "Shift,/", description: "Open shortcuts guide" },
+        { keys: "P", description: "Crea progetto" },
+        { keys: "C", description: "Crea task" },
+        { keys: "Q", description: "Crea ciclo" },
+        { keys: "M", description: "Crea modulo" },
+        { keys: "V", description: "Crea visuale" },
+        { keys: "D", description: "Crea pagina" },
+        { keys: "Delete", description: "Eliminazione in massa delle tasks" },
+        { keys: "Shift,/", description: "Apri la guida delle scorciatoie" },
         {
           keys: platform === "MacOS" ? "Ctrl,control,C" : "Ctrl,Alt,C",
-          description: "Copy issue URL from the issue details page",
+          description: "Copia l'URL della task dalla pagina dei dettagli della task",
         },
       ],
     },
@@ -88,7 +88,7 @@ export const ShortcutCommandsList: React.FC<Props> = (props) => {
         })
       ) : (
         <p className="flex justify-center text-center text-sm text-custom-text-200">
-          No shortcuts found for{" "}
+          Nessuna scorciatoia trovata per{" "}
           <span className="font-semibold italic">
             {`"`}
             {searchQuery}

@@ -6,6 +6,7 @@ import { IExportData } from "@plane/types";
 import { Button } from "@plane/ui";
 // helpers
 import { getDate, renderFormattedDate } from "@/helpers/date-time.helper";
+import { capitalizeFirstLetter } from "@/helpers/string.helper";
 // types
 
 type Props = {
@@ -17,15 +18,6 @@ export const SingleExport: FC<Props> = ({ service, refreshing }) => {
   const provider = service.provider;
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isLoading] = useState(false);
-
-  const statusTranslations: Record<"completed" | "processing" | "failed" | "expired", string> = {
-    completed: "completato",
-    processing: "in elaborazione",
-    failed: "fallito",
-    expired: "scaduto",
-  };
-  
-  const statusKey = service.status as keyof typeof statusTranslations;
 
   const checkExpiry = (inputDateString: string) => {
     const currentDate = new Date();
@@ -58,12 +50,12 @@ export const SingleExport: FC<Props> = ({ service, refreshing }) => {
                       : ""
             }`}
           >
-            {refreshing ? "Refreshing..." : statusKey || service.status}
+            {refreshing ? "Refreshing..." : service.status}
           </span>
         </h4>
         <div className="mt-2 flex items-center gap-2 text-xs text-custom-text-200">
           <span>{renderFormattedDate(service.created_at)}</span>|
-          <span>Esportato da {service?.initiated_by_detail?.display_name}</span>
+          <span>Esportato da {capitalizeFirstLetter(service?.initiated_by_detail?.display_name)}</span>
         </div>
       </div>
       {checkExpiry(service.created_at) ? (
