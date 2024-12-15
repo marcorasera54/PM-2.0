@@ -2,11 +2,10 @@
 
 import { linearGradientDef } from "@nivo/core";
 // icons
-import { BarChart2, Briefcase, Layers } from "lucide-react";
+import { BarChart2, Briefcase, Layers, Presentation } from "lucide-react";
 // types
 import { TIssuesListTypes, TStateGroups } from "@plane/types";
 // ui
-import { ContrastIcon } from "@plane/ui";
 import { Props } from "@/components/icons/types";
 import { EUserPermissions } from "@/plane-web/constants/user-permissions";
 // assets
@@ -273,6 +272,14 @@ export const SIDEBAR_WORKSPACE_MENU_ITEMS: {
     access: [EUserPermissions.ADMIN, EUserPermissions.MEMBER, EUserPermissions.GUEST],
     highlight: (pathname: string, baseUrl: string) => pathname.includes(`${baseUrl}/workspace-views/`),
     Icon: Layers,
+  },
+  {
+    key: "whiteboard",
+    label: "Lavagna",
+    href: `/whiteboard`,
+    access: [EUserPermissions.ADMIN, EUserPermissions.MEMBER],
+    highlight: (pathname: string, baseUrl: string) => pathname.includes(`${baseUrl}/whiteboard/`),
+    Icon: Presentation,
   },
   {
     key: "analytics",

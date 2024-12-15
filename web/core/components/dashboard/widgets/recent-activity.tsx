@@ -16,6 +16,7 @@ import { calculateTimeAgo } from "@/helpers/date-time.helper";
 import { getFileURL } from "@/helpers/file.helper";
 // hooks
 import { useDashboard, useUser } from "@/hooks/store";
+import { capitalizeFirstLetter } from "@/helpers/string.helper";
 
 const WIDGET_KEY = "recent_activity";
 
@@ -75,7 +76,7 @@ export const RecentActivityWidget: React.FC<WidgetProps> = observer((props) => {
               <div className="-mt-2 break-words">
                 <p className="inline text-sm text-custom-text-200">
                   <span className="font-medium text-custom-text-100">
-                    {activity.actor_detail?.display_name}{" "}
+                    {capitalizeFirstLetter(activity.actor_detail?.display_name)}{" "}
                   </span>
                   {activity.field ? (
                     <ActivityMessage activity={activity} showIssue />
