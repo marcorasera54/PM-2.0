@@ -87,8 +87,22 @@ class WorkspaceGPTIntegrationEndpoint(BaseAPIView):
         allowed_roles=[ROLE.ADMIN, ROLE.MEMBER], level="WORKSPACE"
     )
     def post(self, request, slug):
-        OPENAI_API_KEY = "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"
-        GPT_ENGINE = "gpt-4o"
+        OPENAI_API_KEY, GPT_ENGINE = get_configuration_value(
+            [
+                {
+                    "key": "OPENAI_API_KEY",
+                    "default": os.environ.get("OPENAI_API_KEY", None),
+                },
+                {
+                    "key": "GPT_ENGINE",
+                    "default": os.environ.get("GPT_ENGINE", "gpt-3.5-turbo"),
+                },
+            ]
+        )
+
+        # OPENAI_API_KEY = "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"
+        # GPT_ENGINE = "gpt-4o"
+
 
         # Get the configuration value
         # Check the keys
@@ -127,6 +141,7 @@ class WorkspaceGPTIntegrationEndpoint(BaseAPIView):
             },
             status=status.HTTP_200_OK,
         )
+
 
 class UnsplashEndpoint(BaseAPIView):
     def get(self, request):
