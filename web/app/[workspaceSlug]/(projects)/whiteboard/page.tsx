@@ -1,7 +1,7 @@
 "use client";
 
 import { observer } from 'mobx-react';
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Excalidraw, MainMenu } from '@excalidraw/excalidraw';
 import { useTheme } from 'next-themes'; // Assuming useTheme is defined and exported from 'theme.js'
 import { SunMoon } from "lucide-react";

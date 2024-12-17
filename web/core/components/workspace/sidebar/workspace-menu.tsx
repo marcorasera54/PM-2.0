@@ -175,13 +175,16 @@ export const SidebarWorkspaceMenu = observer(() => {
                         className={`${sidebarCollapsed ? "p-0 size-8 aspect-square justify-center mx-auto" : ""}`}
                         isActive={link.highlight(pathname, `/${workspaceSlug}`)}
                       >
-                        <div className="flex items-center gap-1.5 py-[1px]">
-                          <link.Icon
-                            className={cn("size-4", {
-                              "rotate-180": link.key === "active-cycles",
-                            })}
-                          />
-                          {!sidebarCollapsed && <p className="text-sm leading-5 font-medium">{link.label}</p>}
+                        <div className="flex items-center justify-between gap-1.5 py-[1px] w-full">
+                          <div className="flex items-center gap-1.5">
+                            <link.Icon
+                              className={cn("size-4", {
+                                "rotate-180": link.key === "active-cycles",
+                              })}
+                            />
+                            {!sidebarCollapsed && <p className="text-sm leading-5 font-medium">{link.label}</p>}
+                          </div>
+                          {link.isDemo && <span className="text-xs text-custom-primary-200 bg-custom-primary-100/20 rounded-md font-medium px-2 py-1">Demo</span>}
                         </div>
                         {!sidebarCollapsed && link.key === "active-cycles" && indicatorElement}
                       </SidebarNavItem>

@@ -256,6 +256,7 @@ export const SIDEBAR_WORKSPACE_MENU_ITEMS: {
   access: EUserPermissions[];
   highlight: (pathname: string, baseUrl: string) => boolean;
   Icon: React.FC<Props>;
+  isDemo?: boolean;
 }[] = [
   {
     key: "projects",
@@ -280,6 +281,7 @@ export const SIDEBAR_WORKSPACE_MENU_ITEMS: {
     access: [EUserPermissions.ADMIN, EUserPermissions.MEMBER],
     highlight: (pathname: string, baseUrl: string) => pathname.includes(`${baseUrl}/whiteboard/`),
     Icon: Presentation,
+    isDemo: true,
   },
   {
     key: "analytics",
