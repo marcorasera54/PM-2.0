@@ -100,9 +100,6 @@ class WorkspaceGPTIntegrationEndpoint(BaseAPIView):
             ]
         )
 
-        # OPENAI_API_KEY = "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"
-        # GPT_ENGINE = "gpt-4o"
-
 
         # Get the configuration value
         # Check the keys
