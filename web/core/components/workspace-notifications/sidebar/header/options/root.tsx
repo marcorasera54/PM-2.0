@@ -44,7 +44,7 @@ export const NotificationSidebarHeaderOptions: FC<TNotificationSidebarHeaderOpti
   return (
     <div className="relative flex justify-center items-center gap-2 text-sm">
       {/* mark all notifications as read*/}
-      <Tooltip tooltipContent="Mark all as read" isMobile={isMobile} position="bottom">
+      <Tooltip tooltipContent="Segna tutto come letto" isMobile={isMobile} position="bottom">
         <div
           className="flex-shrink-0 w-5 h-5 flex justify-center items-center overflow-hidden cursor-pointer transition-all hover:bg-custom-background-80 rounded-sm"
           onClick={() => {
@@ -61,7 +61,7 @@ export const NotificationSidebarHeaderOptions: FC<TNotificationSidebarHeaderOpti
       </Tooltip>
 
       {/* refetch current notifications */}
-      <Tooltip tooltipContent="Refresh" isMobile={isMobile} position="bottom">
+      <Tooltip tooltipContent="Ricarica" isMobile={isMobile} position="bottom">
         <div
           className="flex-shrink-0 w-5 h-5 flex justify-center items-center overflow-hidden cursor-pointer transition-all hover:bg-custom-background-80 rounded-sm"
           onClick={refreshNotifications}

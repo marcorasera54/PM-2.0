@@ -49,7 +49,7 @@ export const PROFILE_ACTION_LINKS: {
 export const PROFILE_VIEWER_TAB = [
   {
     route: "",
-    label: "Summary",
+    label: "Sintesi",
     selected: "/",
   },
 ];
@@ -57,22 +57,22 @@ export const PROFILE_VIEWER_TAB = [
 export const PROFILE_ADMINS_TAB = [
   {
     route: "assigned",
-    label: "Assigned",
+    label: "Assegnato",
     selected: "/assigned/",
   },
   {
     route: "created",
-    label: "Created",
+    label: "Creato",
     selected: "/created/",
   },
   {
     route: "subscribed",
-    label: "Subscribed",
+    label: "Registrato",
     selected: "/subscribed/",
   },
   {
     route: "activity",
-    label: "Activity",
+    label: "Attività",
     selected: "/activity/",
   },
 ];

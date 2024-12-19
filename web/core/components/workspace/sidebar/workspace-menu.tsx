@@ -184,7 +184,7 @@ export const SidebarWorkspaceMenu = observer(() => {
                             />
                             {!sidebarCollapsed && <p className="text-sm leading-5 font-medium">{link.label}</p>}
                           </div>
-                          {link.isDemo && <span className="text-xs text-custom-primary-200 bg-custom-primary-100/20 rounded-md font-medium px-2 py-1">Demo</span>}
+                          {!sidebarCollapsed && link.isDemo && <span className="text-xs text-custom-primary-200 bg-custom-primary-100/20 rounded-md font-medium px-2 py-1">Demo</span>}
                         </div>
                         {!sidebarCollapsed && link.key === "active-cycles" && indicatorElement}
                       </SidebarNavItem>

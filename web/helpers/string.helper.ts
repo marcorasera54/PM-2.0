@@ -16,7 +16,10 @@ export const addSpaceIfCamelCase = (str: string) => {
 
 export const replaceUnderscoreIfSnakeCase = (str: string) => str.replace(/_/g, " ");
 
-export const capitalizeFirstLetter = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
+export const capitalizeFirstLetter = (str: string | undefined): string => {
+  if (!str) return '';
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
 
 export const truncateText = (str: string, length: number) => {
   if (!str || str === "") return "";

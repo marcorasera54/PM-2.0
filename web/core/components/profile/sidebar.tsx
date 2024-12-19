@@ -25,6 +25,7 @@ import { useAppTheme, useProject, useUser } from "@/hooks/store";
 import { usePlatformOS } from "@/hooks/use-platform-os";
 // components
 import { ProfileSidebarTime } from "./time";
+import { capitalizeFirstLetter } from "@/helpers/string.helper";
 
 type TProfileSidebar = {
   userProjectsData: IUserProfileProjectSegregation | undefined;
@@ -55,11 +56,11 @@ export const ProfileSidebar: FC<TProfileSidebar> = observer((props) => {
 
   const userDetails = [
     {
-      label: "Joined on",
+      label: "Iscritto il",
       value: renderFormattedDate(userData?.date_joined ?? ""),
     },
     {
-      label: "Timezone",
+      label: "Fuso orario",
       value: <ProfileSidebarTime timeZone={userData?.user_timezone} />,
     },
   ];
@@ -125,9 +126,9 @@ export const ProfileSidebar: FC<TProfileSidebar> = observer((props) => {
           <div className="px-5">
             <div className="mt-[38px]">
               <h4 className="text-lg font-semibold">
-                {userData?.first_name} {userData?.last_name}
+                {capitalizeFirstLetter(userData?.first_name)} {capitalizeFirstLetter(userData?.last_name)}
               </h4>
-              <h6 className="text-sm text-custom-text-200">({userData?.display_name})</h6>
+              <h6 className="text-sm text-custom-text-200">@{userData?.display_name}</h6>
             </div>
             <div className="mt-6 space-y-5">
               {userDetails.map((detail) => (
@@ -164,7 +165,7 @@ export const ProfileSidebar: FC<TProfileSidebar> = observer((props) => {
                           </div>
                           <div className="flex flex-shrink-0 items-center gap-2">
                             {project.assigned_issues > 0 && (
-                              <Tooltip tooltipContent="Completion percentage" position="left" isMobile={isMobile}>
+                              <Tooltip tooltipContent="Percentuale di completamento" position="left" isMobile={isMobile}>
                                 <div
                                   className={`rounded px-1 py-0.5 text-xs font-medium ${
                                     completedIssuePercentage <= 35
@@ -227,30 +228,30 @@ export const ProfileSidebar: FC<TProfileSidebar> = observer((props) => {
                               <div className="flex items-center justify-between gap-2">
                                 <div className="flex items-center gap-2">
                                   <div className="h-2.5 w-2.5 rounded-sm bg-[#203b80]" />
-                                  Created
+                                  Create
                                 </div>
-                                <div className="font-medium">{project.created_issues} Issues</div>
+                                <div className="font-medium">{project.created_issues} Tasks</div>
                               </div>
                               <div className="flex items-center justify-between gap-2">
                                 <div className="flex items-center gap-2">
                                   <div className="h-2.5 w-2.5 rounded-sm bg-[#3f76ff]" />
-                                  Assigned
+                                  Assegnate
                                 </div>
-                                <div className="font-medium">{project.assigned_issues} Issues</div>
+                                <div className="font-medium">{project.assigned_issues} Tasks</div>
                               </div>
                               <div className="flex items-center justify-between gap-2">
                                 <div className="flex items-center gap-2">
                                   <div className="h-2.5 w-2.5 rounded-sm bg-[#f59e0b]" />
-                                  Due
+                                  Da fare
                                 </div>
-                                <div className="font-medium">{project.pending_issues} Issues</div>
+                                <div className="font-medium">{project.pending_issues} Tasks</div>
                               </div>
                               <div className="flex items-center justify-between gap-2">
                                 <div className="flex items-center gap-2">
                                   <div className="h-2.5 w-2.5 rounded-sm bg-[#16a34a]" />
-                                  Completed
+                                  Completate
                                 </div>
-                                <div className="font-medium">{project.completed_issues} Issues</div>
+                                <div className="font-medium">{project.completed_issues} Tasks</div>
                               </div>
                             </div>
                           </Disclosure.Panel>

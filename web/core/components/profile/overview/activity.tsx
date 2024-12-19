@@ -19,6 +19,7 @@ import { useUser } from "@/hooks/store";
 import recentActivityEmptyState from "@/public/empty-state/recent_activity.svg";
 // services
 import { UserService } from "@/services/user.service";
+import { capitalizeFirstLetter } from "@/helpers/string.helper";
 
 const userService = new UserService();
 
@@ -39,7 +40,7 @@ export const ProfileActivity = observer(() => {
 
   return (
     <div className="space-y-2">
-      <h3 className="text-lg font-medium">Recent activity</h3>
+      <h3 className="text-lg font-medium">Attività recenti</h3>
       <Card>
         {userProfileActivity ? (
           userProfileActivity.results.length > 0 ? (
@@ -62,13 +63,13 @@ export const ProfileActivity = observer(() => {
                   <div className="-mt-1 w-4/5 break-words">
                     <p className="inline text-sm text-custom-text-200">
                       <span className="font-medium text-custom-text-100">
-                        {currentUser?.id === activity.actor_detail?.id ? "You" : activity.actor_detail?.display_name}{" "}
+                        {capitalizeFirstLetter(activity.actor_detail?.display_name)}{" "}
                       </span>
                       {activity.field ? (
                         <ActivityMessage activity={activity} showIssue />
                       ) : (
                         <span>
-                          created <IssueLink activity={activity} />
+                          ha creato <IssueLink activity={activity} />
                         </span>
                       )}
                     </p>

@@ -20,26 +20,26 @@ export const ProfileStats: React.FC<Props> = ({ userProfile }) => {
     {
       icon: CreateIcon,
       route: "created",
-      title: "Issues created",
+      title: "Tasks create",
       value: userProfile?.created_issues ?? "...",
     },
     {
       icon: UserCircle2,
       route: "assigned",
-      title: "Issues assigned",
+      title: "Tasks assegnate",
       value: userProfile?.assigned_issues ?? "...",
     },
     {
       icon: LayerStackIcon,
       route: "subscribed",
-      title: "Issues subscribed",
+      title: "Tasks registrate",
       value: userProfile?.subscribed_issues ?? "...",
     },
   ];
 
   return (
     <div className="space-y-2">
-      <h3 className="text-lg font-medium">Overview</h3>
+      <h3 className="text-lg font-medium">Panoramica</h3>
       {userProfile ? (
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {overviewCards.map((card) => (

@@ -16,6 +16,7 @@ import { calculateTimeAgo } from "@/helpers/date-time.helper";
 import { getFileURL } from "@/helpers/file.helper";
 // hooks
 import { useUser } from "@/hooks/store";
+import { capitalizeFirstLetter } from "@/helpers/string.helper";
 
 type Props = {
   activity: IUserActivityResponse | undefined;
@@ -67,7 +68,7 @@ export const ActivityList: React.FC<Props> = observer((props) => {
                             : activityItem.actor_detail.display_name}
                         </div>
                         <p className="mt-0.5 text-xs text-custom-text-200">
-                          Commented {calculateTimeAgo(activityItem.created_at)}
+                          ha commentato {calculateTimeAgo(activityItem.created_at)}
                         </p>
                       </div>
                       <div className="issue-comments-section p-0">
@@ -95,7 +96,7 @@ export const ActivityList: React.FC<Props> = observer((props) => {
               ) &&
               !activityItem.field ? (
                 <span>
-                  created <IssueLink activity={activityItem} />
+                  ha creato <IssueLink activity={activityItem} />
                 </span>
               ) : (
                 <ActivityMessage activity={activityItem} showIssue />
@@ -127,7 +128,7 @@ export const ActivityList: React.FC<Props> = observer((props) => {
                                     className="h-full w-full rounded-full object-cover"
                                   />
                                 ) : (
-                                  <div className="grid h-6 w-6 place-items-center rounded-full border-2 border-white bg-gray-700 text-xs capitalize text-white">
+                                  <div className="grid h-6 w-6 place-items-center rounded-full font-medium bg-gray-700 text-xs capitalize text-white">
                                     {activityItem.actor_detail.display_name?.[0]}
                                   </div>
                                 )}
@@ -147,9 +148,7 @@ export const ActivityList: React.FC<Props> = observer((props) => {
                                 className="inline"
                               >
                                 <span className="text-gray font-medium">
-                                  {currentUser?.id === activityItem.actor_detail.id
-                                    ? "You"
-                                    : activityItem.actor_detail.display_name}
+                                  {capitalizeFirstLetter(activityItem.actor_detail.display_name)}
                                 </span>
                               </Link>
                             )}{" "}

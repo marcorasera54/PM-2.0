@@ -16,7 +16,7 @@ type Props = {
 
 export const ProfilePriorityDistribution: React.FC<Props> = ({ userProfile }) => (
   <div className="flex flex-col space-y-2">
-    <h3 className="text-lg font-medium">Issues by Priority</h3>
+    <h3 className="text-lg font-medium">Tasks per priorità</h3>
     {userProfile ? (
       <Card>
         {userProfile.priority_distribution.length > 0 ? (

@@ -63,21 +63,22 @@ export const PROJECT_ORDER_BY_OPTIONS: {
 }[] = [
   {
     key: "sort_order",
-    label: "Manual",
+    label: "Manuale",
   },
   {
     key: "name",
-    label: "Name",
+    label: "Nome",
   },
   {
     key: "created_at",
-    label: "Created date",
+    label: "Data di creazione",
   },
   {
     key: "members_length",
-    label: "Number of members",
+    label: "Numero di membri",
   },
 ];
+
 
 export const PROJECT_DISPLAY_FILTER_OPTIONS: {
   key: TProjectAppliedDisplayFilterKeys;

@@ -39,7 +39,7 @@ export const DownloadActivityButton = () => {
     // create a link element
     const a = document.createElement("a");
     a.href = url;
-    a.download = `profile-activity-${Date.now()}.csv`;
+    a.download = `attività-profilo-${Date.now()}.csv`;
     document.body.appendChild(a);
 
     // simulate click on the link element to trigger download
@@ -52,7 +52,7 @@ export const DownloadActivityButton = () => {
 
   return (
     <Button onClick={handleDownload} loading={isDownloading}>
-      {isDownloading ? "Downloading" : "Download today's activity"}
+      {isDownloading ? "Download in corso" : "Scarica l'attività di oggi"}
     </Button>
   );
 };

@@ -2,6 +2,7 @@ import { FC } from "react";
 // hooks
 import { IUser } from "@plane/types";
 import { useCurrentTime } from "@/hooks/use-current-time";
+import { capitalizeFirstLetter } from "@/helpers/string.helper";
 // types
 
 export interface IUserGreetingsView {
@@ -39,7 +40,7 @@ export const UserGreetingsView: FC<IUserGreetingsView> = (props) => {
   return (
     <div>
       <h3 className="text-xl font-semibold">
-        {greeting}, {user?.first_name} {user?.last_name}
+        {greeting}, {capitalizeFirstLetter(user?.first_name)} {capitalizeFirstLetter(user?.last_name)}
       </h3>
       <h6 className="flex items-center gap-2 font-medium text-custom-text-400">
         <div>{greeting === "Buongiorno" ? "🌤️" : greeting === "Buon pomeriggio" ? "🌥️" : "🌙️"}</div>

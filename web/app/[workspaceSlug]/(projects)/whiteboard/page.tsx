@@ -7,16 +7,24 @@ import { useTheme } from 'next-themes'; // Assuming useTheme is defined and expo
 import { SunMoon } from "lucide-react";
 
 const WhiteboardPage = observer(() => {
-  const { theme, setTheme } = useTheme(); // Destructure theme state and setter
+  const { theme, setTheme, resolvedTheme } = useTheme(); // resolvedTheme respects "system"
 
-  const excalidrawTheme = theme === 'dark' ? 'dark' : 'light';
+  // Set the Excalidraw theme based on resolvedTheme
+  const excalidrawTheme = resolvedTheme === "dark" ? "dark" : "light";
 
+  // Toggle between light, dark, and system themes
   const toggleTheme = useCallback(() => {
-    setTheme(theme === 'light' ? 'dark' : 'light'); // Toggle between 'light' and 'dark'
+    if (theme === "light") {
+      setTheme("dark");
+    } else if (theme === "dark") {
+      setTheme("system");
+    } else {
+      setTheme("light");
+    }
   }, [theme, setTheme]);
-
+  
   return (
-    <div className={`h-screen w-screen ${theme}`}> {/* Apply theme as a class if needed */}
+    <div className={`h-screen w-screen ${resolvedTheme}`}> {/* Apply theme as a class if needed */}
       <Excalidraw theme={excalidrawTheme}>
         <MainMenu>
           <MainMenu.DefaultItems.SaveAsImage />

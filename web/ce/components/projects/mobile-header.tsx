@@ -68,7 +68,7 @@ export const ProjectsListMobileHeader = observer(() => {
           menuButton={
             <div className="flex text-sm items-center gap-2 neutral-primary text-custom-text-200">
               <ListFilter className="h-3 w-3" />
-              Filters
+              Filtri
               <ChevronDown className="h-3 w-3" strokeWidth={2} />
             </div>
           }

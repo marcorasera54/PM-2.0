@@ -29,12 +29,12 @@ export type TNotificationTab = ENotificationTab.ALL | ENotificationTab.MENTIONS;
 
 export const NOTIFICATION_TABS = [
   {
-    label: "All",
+    label: "TUtto",
     value: ENotificationTab.ALL,
     count: (unReadNotification: TUnreadNotificationsCount) => unReadNotification?.total_unread_notifications_count || 0,
   },
   {
-    label: "Mentions",
+    label: "Menzioni",
     value: ENotificationTab.MENTIONS,
     count: (unReadNotification: TUnreadNotificationsCount) =>
       unReadNotification?.mention_unread_notifications_count || 0,
@@ -43,23 +43,24 @@ export const NOTIFICATION_TABS = [
 
 export const FILTER_TYPE_OPTIONS = [
   {
-    label: "Assigned to me",
+    label: "Assegnato a me",
     value: ENotificationFilterType.ASSIGNED,
   },
   {
-    label: "Created by me",
+    label: "Creato da me",
     value: ENotificationFilterType.CREATED,
   },
   {
-    label: "Subscribed by me",
+    label: "Registrato da me",
     value: ENotificationFilterType.SUBSCRIBED,
   },
 ];
 
+
 export const NOTIFICATION_SNOOZE_OPTIONS = [
   {
     key: "1_day",
-    label: "1 day",
+    label: "1 giorno",
     value: () => {
       const date = new Date();
       return new Date(date.getTime() + 24 * 60 * 60 * 1000);
@@ -67,7 +68,7 @@ export const NOTIFICATION_SNOOZE_OPTIONS = [
   },
   {
     key: "3_days",
-    label: "3 days",
+    label: "3 giorni",
     value: () => {
       const date = new Date();
       return new Date(date.getTime() + 3 * 24 * 60 * 60 * 1000);
@@ -75,7 +76,7 @@ export const NOTIFICATION_SNOOZE_OPTIONS = [
   },
   {
     key: "5_days",
-    label: "5 days",
+    label: "5 giorni",
     value: () => {
       const date = new Date();
       return new Date(date.getTime() + 5 * 24 * 60 * 60 * 1000);
@@ -83,7 +84,7 @@ export const NOTIFICATION_SNOOZE_OPTIONS = [
   },
   {
     key: "1_week",
-    label: "1 week",
+    label: "1 settimana",
     value: () => {
       const date = new Date();
       return new Date(date.getTime() + 7 * 24 * 60 * 60 * 1000);
@@ -91,7 +92,7 @@ export const NOTIFICATION_SNOOZE_OPTIONS = [
   },
   {
     key: "2_weeks",
-    label: "2 weeks",
+    label: "2 settimane",
     value: () => {
       const date = new Date();
       return new Date(date.getTime() + 14 * 24 * 60 * 60 * 1000);

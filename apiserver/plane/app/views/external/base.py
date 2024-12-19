@@ -98,9 +98,7 @@ class WorkspaceGPTIntegrationEndpoint(BaseAPIView):
                     "default": os.environ.get("GPT_ENGINE", "gpt-3.5-turbo"),
                 },
             ]
-        )git push --force origin master
-
-
+        )
 
         # Get the configuration value
         # Check the keys
