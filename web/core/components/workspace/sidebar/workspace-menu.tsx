@@ -109,7 +109,7 @@ export const SidebarWorkspaceMenu = observer(() => {
               <Link href={`/${workspaceSlug}/projects/archives`}>
                 <div className="flex items-center justify-start gap-2">
                   <ArchiveIcon className="h-3.5 w-3.5 stroke-[1.5]" />
-                  <span>Archives</span>
+                  <span>Archiviati</span>
                 </div>
               </Link>
             </CustomMenu.MenuItem>
@@ -119,7 +119,7 @@ export const SidebarWorkspaceMenu = observer(() => {
                 <Link href={`/${workspaceSlug}/settings`}>
                   <div className="flex items-center justify-start gap-2">
                     <Settings className="h-3.5 w-3.5 stroke-[1.5]" />
-                    <span>Settings</span>
+                    <span>Impostazioni</span>
                   </div>
                 </Link>
               </CustomMenu.MenuItem>
@@ -176,7 +176,7 @@ export const SidebarWorkspaceMenu = observer(() => {
                         isActive={link.highlight(pathname, `/${workspaceSlug}`)}
                       >
                         <div className="flex items-center justify-between gap-1.5 py-[1px] w-full">
-                          <div className="flex items-center gap-1.5">
+                          <div className="flex items-center gap-1.5 py-[1px]1">
                             <link.Icon
                               className={cn("size-4", {
                                 "rotate-180": link.key === "active-cycles",

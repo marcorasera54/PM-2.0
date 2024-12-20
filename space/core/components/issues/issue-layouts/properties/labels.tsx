@@ -19,12 +19,12 @@ export const IssueBlockLabels = observer(({ labelIds, shouldShowLabel = false }:
 
   if (labels.length <= 0)
     return (
-      <Tooltip position="top" tooltipHeading="Labels" tooltipContent="None">
+      <Tooltip position="top" tooltipHeading="Etichette" tooltipContent="Nessuna">
         <div
           className={`flex h-full items-center justify-center gap-2 rounded px-2.5 py-1 text-xs border-[0.5px] border-custom-border-300`}
         >
           <Tags className="h-3.5 w-3.5" strokeWidth={2} />
-          {shouldShowLabel && <span>No Labels</span>}
+          {shouldShowLabel && <span>Nessuna etichetta</span>}
         </div>
       </Tooltip>
     );
@@ -34,7 +34,7 @@ export const IssueBlockLabels = observer(({ labelIds, shouldShowLabel = false }:
       {labels.length <= 2 ? (
         <>
           {labels.map((label) => (
-            <Tooltip key={label.id} position="top" tooltipHeading="Labels" tooltipContent={label?.name ?? ""}>
+            <Tooltip key={label.id} position="top" tooltipHeading="Etichette" tooltipContent={label?.name ?? ""}>
               <div
                 key={label?.id}
                 className={`flex overflow-hidden h-full max-w-full flex-shrink-0 items-center rounded border-[0.5px] border-custom-border-300 px-2.5 py-1 text-xs`}
@@ -57,10 +57,10 @@ export const IssueBlockLabels = observer(({ labelIds, shouldShowLabel = false }:
           className={`flex h-full flex-shrink-0 items-center rounded border-[0.5px] border-custom-border-300 px-2.5 py-1 text-xs cursor-not-allowed"
             `}
         >
-          <Tooltip position="top" tooltipHeading="Labels" tooltipContent={labelsString}>
+          <Tooltip position="top" tooltipHeading="Etichette" tooltipContent={labelsString}>
             <div className="flex h-full items-center gap-1.5 text-custom-text-200">
               <span className="h-2 w-2 flex-shrink-0 rounded-full bg-custom-primary" />
-              {`${labels.length} Labels`}
+              {`${labels.length} Etichette`}
             </div>
           </Tooltip>
         </div>

@@ -48,7 +48,7 @@ const ProjectCreateHeader: React.FC<Props> = (props) => {
           control={control}
           render={({ field: { value, onChange } }) => (
             <ImagePickerPopover
-              label="Change Cover"
+              label="Cambia Copertina"
               onChange={onChange}
               control={control}
               value={value}

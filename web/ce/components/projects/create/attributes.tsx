@@ -77,7 +77,7 @@ const ProjectAttributes: FC<Props> = (props) => {
                 <MemberDropdown
                   value={value}
                   onChange={(lead) => onChange(lead === value ? null : lead)}
-                  placeholder="Lead"
+                  placeholder="Responsabile"
                   multiple={false}
                   buttonVariant="border-with-text"
                   tabIndex={5}

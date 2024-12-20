@@ -71,7 +71,7 @@ const HeaderFilters = observer(({ filterMenuButton, isMobile, classname = "", fi
       <div className={cn(filterClassname)}>
         <FiltersDropdown
           icon={<ListFilter className="h-3 w-3" />}
-          title="Filters"
+          title="Filtri"
           placement="bottom-end"
           isFiltersApplied={isFiltersApplied}
           menuButton={filterMenuButton || null}

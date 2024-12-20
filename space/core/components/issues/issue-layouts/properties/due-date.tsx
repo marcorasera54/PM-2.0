@@ -26,7 +26,7 @@ export const IssueBlockDate = observer((props: Props) => {
   const formattedDate = renderFormattedDate(due_date);
 
   return (
-    <Tooltip tooltipHeading="Due Date" tooltipContent={formattedDate}>
+    <Tooltip tooltipHeading="Scadenza" tooltipContent={formattedDate}>
       <div
         className={cn("flex h-full items-center gap-1 rounded px-2.5 py-1 text-xs text-custom-text-100", {
           "text-red-500": shouldHighLight && due_date && shouldHighlightIssueDueDate(due_date, state?.group),
@@ -34,7 +34,7 @@ export const IssueBlockDate = observer((props: Props) => {
         })}
       >
         <CalendarCheck2 className="size-3 flex-shrink-0" />
-        {formattedDate ? formattedDate : "No Date"}
+        {formattedDate ? formattedDate : "Nessuna Data"}
       </div>
     </Tooltip>
   );

@@ -12,7 +12,7 @@ export const KanbanQuickAddIssueButton: FC<TQuickAddIssueButton> = observer((pro
       onClick={onClick}
     >
       <PlusIcon className="h-3.5 w-3.5 stroke-2" />
-      <span className="text-sm font-medium">New Issue</span>
+      <span className="text-sm font-medium">Nuova Task</span>
     </div>
   );
 });

@@ -86,7 +86,7 @@ export const MemberDropdown: React.FC<Props> = observer((props) => {
         if (value.length === 1) {
           return getUserDetails(value[0])?.display_name || placeholder;
         } else {
-          return showUserDetails ? `${value.length} members` : "";
+          return showUserDetails ? `${value.length} membri` : "";
         }
       } else {
         return placeholder;
@@ -131,7 +131,7 @@ export const MemberDropdown: React.FC<Props> = observer((props) => {
             className={cn("text-xs", buttonClassName)}
             isActive={isOpen}
             tooltipHeading={placeholder}
-            tooltipContent={tooltipContent ?? `${value?.length ?? 0} assignee${value?.length !== 1 ? "s" : ""}`}
+            tooltipContent={tooltipContent ?? `${value?.length ?? 0} assegnatar${value?.length !== 1 ? "i" : "io"}`}
             showTooltip={showTooltip}
             variant={buttonVariant}
             renderToolTipByDefault={renderByDefault}

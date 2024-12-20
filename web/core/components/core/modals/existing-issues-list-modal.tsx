@@ -206,13 +206,13 @@ export const ExistingIssuesListModal: React.FC<Props> = (props) => {
                   >
                     {searchTerm !== "" && (
                       <h5 className="mx-2 text-[0.825rem] text-custom-text-200">
-                        Search results for{" "}
+                        Risultati della ricerca per{" "}
                         <span className="text-custom-text-100">
                           {'"'}
                           {searchTerm}
                           {'"'}
                         </span>{" "}
-                        in project:
+                        in progetto:
                       </h5>
                     )}
 

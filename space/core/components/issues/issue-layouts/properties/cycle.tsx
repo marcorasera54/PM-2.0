@@ -18,7 +18,7 @@ export const IssueBlockCycle = observer(({ cycleId, shouldShowBorder = true }: P
   const cycle = getCycleById(cycleId);
 
   return (
-    <Tooltip tooltipHeading="Cycle" tooltipContent={cycle?.name ?? "No Cycle"}>
+    <Tooltip tooltipHeading="Cicli" tooltipContent={cycle?.name ?? "Nessun Ciclo"}>
       <div
         className={cn(
           "flex h-full w-full items-center justify-between gap-1 rounded px-2.5 py-1 text-xs  duration-300 focus:outline-none",
@@ -27,7 +27,7 @@ export const IssueBlockCycle = observer(({ cycleId, shouldShowBorder = true }: P
       >
         <div className="flex w-full items-center text-xs gap-1.5">
           <ContrastIcon className="h-3 w-3 flex-shrink-0" />
-          <div className="max-w-40 flex-grow truncate ">{cycle?.name ?? "No Cycle"}</div>
+          <div className="max-w-40 flex-grow truncate ">{cycle?.name ?? "Nessun Ciclo"}</div>
         </div>
       </div>
     </Tooltip>

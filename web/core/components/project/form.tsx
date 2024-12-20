@@ -226,7 +226,7 @@ export const ProjectDetailsForm: FC<IProjectDetailsForm> = (props) => {
                 name="cover_image_url"
                 render={({ field: { value, onChange } }) => (
                   <ImagePickerPopover
-                    label="Change cover"
+                    label="Cambia copertina"
                     control={control}
                     onChange={onChange}
                     value={value}

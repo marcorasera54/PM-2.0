@@ -50,10 +50,10 @@ const ProjectCommonAttributes: React.FC<Props> = (props) => {
           control={control}
           name="name"
           rules={{
-            required: "Name is required",
+            required: "Nome richiesto",
             maxLength: {
               value: 255,
-              message: "Title should be less than 255 characters",
+              message: "Il titolo deve contenere meno di 255 caratteri",
             },
           }}
           render={({ field: { value, onChange } }) => (
@@ -64,7 +64,7 @@ const ProjectCommonAttributes: React.FC<Props> = (props) => {
               value={value}
               onChange={handleNameChange(onChange)}
               hasError={Boolean(errors.name)}
-              placeholder="Project name"
+              placeholder="Nome progetto"
               className="w-full focus:border-blue-400"
               tabIndex={getIndex("name")}
             />
@@ -77,17 +77,17 @@ const ProjectCommonAttributes: React.FC<Props> = (props) => {
           control={control}
           name="identifier"
           rules={{
-            required: "Project ID is required",
+            required: "ID Progetto richiesto",
             // allow only alphanumeric & non-latin characters
             validate: (value) =>
-              /^[ÇŞĞIİÖÜA-Z0-9]+$/.test(value.toUpperCase()) || "Only Alphanumeric & Non-latin characters are allowed.",
+              /^[ÇŞĞIİÖÜA-Z0-9]+$/.test(value.toUpperCase()) || "Solo caratteri alfanumerici e non latini sono consentiti.",
             minLength: {
               value: 1,
-              message: "Project ID must at least be of 1 character",
+              message: "L'ID del progetto deve contenere almeno 1 carattere",
             },
             maxLength: {
               value: 5,
-              message: "Project ID must at most be of 5 characters",
+              message: "L'ID del progetto deve contenere al massimo 5 caratteri",
             },
           }}
           render={({ field: { value, onChange } }) => (
@@ -98,7 +98,7 @@ const ProjectCommonAttributes: React.FC<Props> = (props) => {
               value={value}
               onChange={handleIdentifierChange(onChange)}
               hasError={Boolean(errors.identifier)}
-              placeholder="Project ID"
+              placeholder="ID Progetto"
               className={cn("w-full text-xs focus:border-blue-400 pr-7", {
                 uppercase: value,
               })}
@@ -108,7 +108,7 @@ const ProjectCommonAttributes: React.FC<Props> = (props) => {
         />
         <Tooltip
           isMobile={isMobile}
-          tooltipContent="Helps you identify issues in the project uniquely. Max 5 characters."
+          tooltipContent="Ti aiuta a identificare in modo univoco i problemi nel progetto. Max 5 caratteri."
           className="text-sm"
           position="right-top"
         >
@@ -125,9 +125,9 @@ const ProjectCommonAttributes: React.FC<Props> = (props) => {
               id="description"
               name="description"
               value={value}
-              placeholder="Description..."
+              placeholder="Descrizione..."
               onChange={onChange}
-              className="!h-24 text-sm focus:border-blue-400"
+              className="!h-24 text-sm resize-none focus:border-blue-400"
               hasError={Boolean(errors?.description)}
               tabIndex={getIndex("description")}
             />

@@ -61,6 +61,26 @@ export interface IKanBan {
 }
 
 export const KanBan: React.FC<IKanBan> = observer((props) => {
+  type TranslationKey = "in_progress" | "not_started" | "done" | "waiting";
+
+  // Italian translations object
+  const italianTranslations: Record<TranslationKey, string> = {
+    "in_progress": "In Corso",
+    "not_started": "Non Iniziato",
+    "done": "Completato",
+    "waiting": "In Attesa",
+  };
+
+  // Function to get the Italian translation
+  const getTranslation = (status: string): string => {
+    // Check if the status is a valid key of italianTranslations
+    if (status in italianTranslations) {
+      return italianTranslations[status as TranslationKey];
+    }
+    // Return the original string if no translation exists
+    return status;
+  };
+
   const {
     issuesMap,
     groupedIssueIds,
@@ -171,7 +191,7 @@ export const KanBan: React.FC<IKanBan> = observer((props) => {
                     group_by={group_by}
                     column_id={subList.id}
                     icon={subList.icon}
-                    title={subList.name}
+                    title={getTranslation(subList.name)}
                     count={getGroupIssueCount(subList.id, undefined, false) ?? 0}
                     issuePayload={subList.payload}
                     disableIssueCreation={disableIssueCreation || isGroupByCreatedBy}

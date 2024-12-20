@@ -90,7 +90,7 @@ export const ProjectsBaseHeader = observer(() => {
             <input
               ref={inputRef}
               className="w-full max-w-[234px] border-none bg-transparent text-sm text-custom-text-100 placeholder:text-custom-text-400 focus:outline-none"
-              placeholder="Search"
+              placeholder="Cerca"
               value={searchQuery}
               onChange={(e) => updateSearchQuery(e.target.value)}
               onKeyDown={handleInputKeyDown}
@@ -122,7 +122,7 @@ export const ProjectsBaseHeader = observer(() => {
             }}
             className="items-center gap-1"
           >
-            <span className="hidden sm:inline-block">Add</span> Project
+            <span className="hidden sm:inline-block">Aggiungi</span> Progetto
           </Button>
         ) : (
           <></>

@@ -26,15 +26,15 @@ import { FileService } from "@/services/file.service";
 const tabOptions = [
   {
     key: "unsplash",
-    title: "Unsplash",
+    title: "Online",
   },
   {
     key: "images",
-    title: "Images",
+    title: "Immagini",
   },
   {
     key: "upload",
-    title: "Upload",
+    title: "Carica",
   },
 ];
 
@@ -215,13 +215,13 @@ export const ImagePickerPopover: React.FC<Props> = observer((props) => {
                             value={value}
                             onChange={(e) => setFormData({ ...formData, search: e.target.value })}
                             ref={ref}
-                            placeholder="Search for images"
+                            placeholder="Cerca per immagini"
                             className="w-full text-sm"
                           />
                         )}
                       />
                       <Button variant="primary" onClick={() => setSearchParams(formData.search)} size="sm">
-                        Search
+                        Cerca
                       </Button>
                     </div>
                     {unsplashImages ? (
@@ -245,7 +245,7 @@ export const ImagePickerPopover: React.FC<Props> = observer((props) => {
                           ))}
                         </div>
                       ) : (
-                        <p className="pt-7 text-center text-xs text-custom-text-300">No images found.</p>
+                        <p className="pt-7 text-center text-xs text-custom-text-300">Nessuna immagine trovata.</p>
                       )
                     ) : (
                       <Loader className="grid grid-cols-4 gap-4">
@@ -284,7 +284,7 @@ export const ImagePickerPopover: React.FC<Props> = observer((props) => {
                           ))}
                         </div>
                       ) : (
-                        <p className="pt-7 text-center text-xs text-custom-text-300">No images found.</p>
+                        <p className="pt-7 text-center text-xs text-custom-text-300">Nessuna immagine trovata.</p>
                       )
                     ) : (
                       <Loader className="grid grid-cols-4 gap-4 pt-4">
@@ -315,7 +315,7 @@ export const ImagePickerPopover: React.FC<Props> = observer((props) => {
                           type="button"
                           className="absolute right-0 top-0 z-40 -translate-y-1/2 rounded bg-custom-background-90 px-2 py-0.5 text-xs font-medium text-custom-text-200"
                         >
-                          Edit
+                          Modifica
                         </button>
                         {image !== null || (value && value !== "") ? (
                           <>
@@ -346,8 +346,7 @@ export const ImagePickerPopover: React.FC<Props> = observer((props) => {
                       </p>
                     )}
 
-                    <p className="text-sm text-custom-text-200">File formats supported- .jpeg, .jpg, .png, .webp</p>
-
+                    <p className="text-sm text-custom-text-200">Formati di file supportati: .jpeg, .jpg, .png, .webp</p>
                     <div className="flex h-12 items-start justify-end gap-2">
                       <Button
                         variant="neutral-primary"
@@ -356,7 +355,7 @@ export const ImagePickerPopover: React.FC<Props> = observer((props) => {
                           setImage(null);
                         }}
                       >
-                        Cancel
+                        Annulla
                       </Button>
                       <Button
                         variant="primary"
@@ -365,7 +364,7 @@ export const ImagePickerPopover: React.FC<Props> = observer((props) => {
                         disabled={!image}
                         loading={isImageUploading}
                       >
-                        {isImageUploading ? "Uploading..." : "Upload & Save"}
+                        {isImageUploading ? "Caricamento..." : "Carica & Salva"}
                       </Button>
                     </div>
                   </div>

@@ -65,7 +65,7 @@ export const IssueBlockMembers = observer(({ memberIds, shouldShowBorder = true 
         <div className="flex items-center gap-1.5 text-custom-text-200">
           <ButtonAvatars members={members} showTooltip={false} />
           {!shouldShowBorder && members.length <= 1 && (
-            <span>{members?.[0]?.member__display_name ?? "No Assignees"}</span>
+            <span>{members?.[0]?.member__display_name ?? "Nessun assegnatario"}</span>
           )}
         </div>
       </div>

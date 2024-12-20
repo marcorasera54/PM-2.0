@@ -85,7 +85,7 @@ export const MemberOptions: React.FC<Props> = observer((props: Props) => {
       content: (
         <div className="flex items-center gap-2">
           <Avatar name={userDetails?.display_name} src={getFileURL(userDetails?.avatar_url ?? "")} />
-          <span className="flex-grow truncate">{currentUser?.id === userId ? "You" : userDetails?.display_name}</span>
+          <span className="flex-grow truncate">{currentUser?.id === userId ? "Tu" : userDetails?.display_name}</span>
         </div>
       ),
     };
@@ -115,7 +115,7 @@ export const MemberOptions: React.FC<Props> = observer((props: Props) => {
             className="w-full bg-transparent py-1 text-xs text-custom-text-200 placeholder:text-custom-text-400 focus:outline-none"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search"
+            placeholder="Cerca"
             displayValue={(assigned: any) => assigned?.name}
             onKeyDown={searchInputKeyDown}
           />
@@ -142,10 +142,10 @@ export const MemberOptions: React.FC<Props> = observer((props: Props) => {
                 </Combobox.Option>
               ))
             ) : (
-              <p className="px-1.5 py-1 italic text-custom-text-400">No matching results</p>
+              <p className="px-1.5 py-1 italic text-custom-text-400">Nessun risultato trovato</p>
             )
           ) : (
-            <p className="px-1.5 py-1 italic text-custom-text-400">Loading...</p>
+            <p className="px-1.5 py-1 italic text-custom-text-400">Caricamento...</p>
           )}
         </div>
       </div>

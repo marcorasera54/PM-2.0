@@ -17,7 +17,7 @@ export const IssueBlockState = observer(({ stateId, shouldShowBorder = true }: P
   const state = getStateById(stateId);
 
   return (
-    <Tooltip tooltipHeading="State" tooltipContent={state?.name ?? "State"}>
+    <Tooltip tooltipHeading="Stato" tooltipContent={state?.name ?? "Stato"}>
       <div
         className={cn("flex h-full w-full items-center justify-between gap-1 rounded px-2.5 py-1 text-xs", {
           "border-[0.5px] border-custom-border-300": shouldShowBorder,

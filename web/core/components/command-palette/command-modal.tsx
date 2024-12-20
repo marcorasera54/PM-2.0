@@ -256,13 +256,13 @@ export const CommandModal: React.FC = observer(() => {
                     <Command.List className="vertical-scrollbar scrollbar-sm max-h-96 overflow-scroll p-2">
                       {searchTerm !== "" && (
                         <h5 className="mx-[3px] my-4 text-xs text-custom-text-100">
-                          Search results for{" "}
+                          Risultati della ricerca per{" "}
                           <span className="font-medium">
                             {'"'}
                             {searchTerm}
                             {'"'}
                           </span>{" "}
-                          in {!projectId || isWorkspaceLevel ? "workspace" : "project"}:
+                          in {!projectId || isWorkspaceLevel ? "area di lavoro" : "progetto"}:
                         </h5>
                       )}
 
