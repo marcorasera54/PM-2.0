@@ -53,7 +53,7 @@ export const FilterMembers: React.FC<Props> = observer((props: Props) => {
   return (
     <>
       <FilterHeader
-        title={`Members${appliedFiltersCount > 0 ? ` (${appliedFiltersCount})` : ""}`}
+        title={`Membri${appliedFiltersCount > 0 ? ` (${appliedFiltersCount})` : ""}`}
         isPreviewEnabled={previewEnabled}
         handleIsPreviewEnabled={() => setPreviewEnabled(!previewEnabled)}
       />

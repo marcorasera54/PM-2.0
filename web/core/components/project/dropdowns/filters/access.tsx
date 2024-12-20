@@ -22,7 +22,7 @@ export const FilterAccess: React.FC<Props> = observer((props) => {
   return (
     <>
       <FilterHeader
-        title={`Access${appliedFiltersCount > 0 ? ` (${appliedFiltersCount})` : ""}`}
+        title={`Visibilità${appliedFiltersCount > 0 ? ` (${appliedFiltersCount})` : ""}`}
         isPreviewEnabled={previewEnabled}
         handleIsPreviewEnabled={() => setPreviewEnabled(!previewEnabled)}
       />

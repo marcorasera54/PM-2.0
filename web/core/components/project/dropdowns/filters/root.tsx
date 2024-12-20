@@ -31,7 +31,7 @@ export const ProjectFiltersSelection: React.FC<Props> = observer((props) => {
           <input
             type="text"
             className="w-full bg-custom-background-90 outline-none placeholder:text-custom-text-400"
-            placeholder="Search"
+            placeholder="Cerca"
             value={filtersSearchQuery}
             onChange={(e) => setFiltersSearchQuery(e.target.value)}
             autoFocus={!isMobile}
@@ -52,7 +52,7 @@ export const ProjectFiltersSelection: React.FC<Props> = observer((props) => {
                 my_projects: !displayFilters.my_projects,
               })
             }
-            title="My projects"
+            title="I miei progetti"
           />
         </div>
 

@@ -34,19 +34,19 @@ export const DATE_BEFORE_FILTER_OPTIONS = [
 
 export const PROJECT_CREATED_AT_FILTER_OPTIONS = [
   {
-    name: "Today",
+    name: "Oggi",
     value: "today;custom;custom",
   },
   {
-    name: "Yesterday",
+    name: "Ieri",
     value: "yesterday;custom;custom",
   },
   {
-    name: "Last 7 days",
+    name: "Ultimi 7 giorni",
     value: "last_7_days;custom;custom",
   },
   {
-    name: "Last 30 days",
+    name: "Ultimi 30 giorni",
     value: "last_30_days;custom;custom",
   },
 ];

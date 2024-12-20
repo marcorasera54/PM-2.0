@@ -53,7 +53,7 @@ export const FilterLead: React.FC<Props> = observer((props: Props) => {
   return (
     <>
       <FilterHeader
-        title={`Lead${appliedFiltersCount > 0 ? ` (${appliedFiltersCount})` : ""}`}
+        title={`Responsabile${appliedFiltersCount > 0 ? ` (${appliedFiltersCount})` : ""}`}
         isPreviewEnabled={previewEnabled}
         handleIsPreviewEnabled={() => setPreviewEnabled(!previewEnabled)}
       />

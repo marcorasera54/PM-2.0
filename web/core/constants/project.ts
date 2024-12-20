@@ -10,14 +10,14 @@ export const NETWORK_CHOICES: {
 }[] = [
   {
     key: 0,
-    label: "Private",
-    description: "Accessible only by invite",
+    label: "Privata",
+    description: "Accessibile solo su invito",
     icon: Lock,
   },
   {
     key: 2,
-    label: "Public",
-    description: "Anyone in the workspace except Guests can join",
+    label: "Pubblica",
+    description: "Chiunque nello spazio di lavoro, eccetto gli ospiti, può unirsi",
     icon: Globe2,
   },
 ];

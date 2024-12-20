@@ -71,7 +71,7 @@ export const ProjectOrderByDropdown: React.FC<Props> = (props) => {
         }}
         disabled={isOrderingDisabled}
       >
-        Ascending
+        Crescente
         {!isOrderingDisabled && !isDescending && <Check className="h-3 w-3" />}
       </CustomMenu.MenuItem>
       <CustomMenu.MenuItem
@@ -81,7 +81,7 @@ export const ProjectOrderByDropdown: React.FC<Props> = (props) => {
         }}
         disabled={isOrderingDisabled}
       >
-        Descending
+        Decrescente
         {!isOrderingDisabled && isDescending && <Check className="h-3 w-3" />}
       </CustomMenu.MenuItem>
     </CustomMenu>
