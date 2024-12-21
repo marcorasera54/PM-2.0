@@ -152,7 +152,7 @@ export const CustomAnalyticsSidebar: React.FC<Props> = observer((props) => {
         <div className="flex items-center gap-1 rounded-md bg-custom-background-80 px-3 py-1 text-xs text-custom-text-200">
           <LayersIcon height={14} width={14} />
           {analytics ? analytics.total : "..."}
-          <div className={cn(isProjectLevel ? "hidden md:block" : "")}>Issues</div>
+          <div className={cn(isProjectLevel ? "hidden md:block" : "")}>Tasks</div>
         </div>
         {isProjectLevel && (
           <div className="flex items-center gap-1 rounded-md bg-custom-background-80 px-3 py-1 text-xs text-custom-text-200">
@@ -187,10 +187,10 @@ export const CustomAnalyticsSidebar: React.FC<Props> = observer((props) => {
             mutate(ANALYTICS(workspaceSlug.toString(), params));
           }}
         >
-          <div className={cn(isProjectLevel ? "hidden md:block" : "")}>Refresh</div>
+          <div className={cn(isProjectLevel ? "hidden md:block" : "")}>Aggiorna</div>
         </Button>
         <Button variant="primary" prependIcon={<Download className="h-3.5 w-3.5" />} onClick={exportAnalytics}>
-          <div className={cn(isProjectLevel ? "hidden md:block" : "")}>Export as CSV</div>
+          <div className={cn(isProjectLevel ? "hidden md:block" : "")}>Esporta CSV</div>
         </Button>
       </div>
     </div>

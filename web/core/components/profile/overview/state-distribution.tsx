@@ -77,7 +77,7 @@ export const ProfileStateDistribution: React.FC<Props> = ({ stateDistribution, u
           </div>
         ) : (
           <ProfileEmptyState
-            title="No Data yet"
+            title="Nessun dato disponibile"
             description="Create issues to view the them by states in the graph for better analysis."
             image={stateGraph}
           />

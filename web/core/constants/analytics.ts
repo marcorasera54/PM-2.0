@@ -2,69 +2,69 @@
 import { TXAxisValues, TYAxisValues } from "@plane/types";
 
 export const ANALYTICS_TABS = [
-  { key: "scope_and_demand", title: "Scope and Demand" },
-  { key: "custom", title: "Custom Analytics" },
+  { key: "scope_and_demand", title: "Ambito e Richiesta" },
+  { key: "custom", title: "Analitiche Personalizzate" },
 ];
 
 export const ANALYTICS_X_AXIS_VALUES: { value: TXAxisValues; label: string }[] = [
   {
     value: "state_id",
-    label: "State name",
+    label: "Nome dello stato",
   },
   {
     value: "state__group",
-    label: "State group",
+    label: "Gruppo di stato",
   },
   {
     value: "priority",
-    label: "Priority",
+    label: "Priorità",
   },
   {
     value: "labels__id",
-    label: "Label",
+    label: "Etichetta",
   },
   {
     value: "assignees__id",
-    label: "Assignee",
+    label: "Assegnatario",
   },
   {
     value: "estimate_point__value",
-    label: "Estimate point",
+    label: "Punto di stima",
   },
   {
     value: "issue_cycle__cycle_id",
-    label: "Cycle",
+    label: "Ciclo",
   },
   {
     value: "issue_module__module_id",
-    label: "Module",
+    label: "Modulo",
   },
   {
     value: "completed_at",
-    label: "Completed date",
+    label: "Data di completamento",
   },
   {
     value: "target_date",
-    label: "Due date",
+    label: "Data di scadenza",
   },
   {
     value: "start_date",
-    label: "Start date",
+    label: "Data di inizio",
   },
   {
     value: "created_at",
-    label: "Created date",
-  },
+    label: "Data di creazione",
+  },  
 ];
 
 export const ANALYTICS_Y_AXIS_VALUES: { value: TYAxisValues; label: string }[] = [
   {
     value: "issue_count",
-    label: "Issue Count",
+    label: "Conteggio delle tasks",
   },
   {
     value: "estimate",
-    label: "Estimate",
+    label: "Stima",
   },
 ];
 

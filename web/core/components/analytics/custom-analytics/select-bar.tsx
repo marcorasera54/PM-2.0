@@ -39,7 +39,7 @@ export const CustomAnalyticsSelectBar: React.FC<Props> = observer((props) => {
     >
       {!isProjectLevel && (
         <div>
-          <h6 className="text-xs text-custom-text-200 mb-2">Project</h6>
+          <h6 className="text-xs text-custom-text-200 mb-2">Progetto</h6>
           <Controller
             name="project"
             control={control}
@@ -54,7 +54,7 @@ export const CustomAnalyticsSelectBar: React.FC<Props> = observer((props) => {
         </div>
       )}
       <div>
-        <h6 className="text-xs text-custom-text-200 mb-2">Measure (y-axis)</h6>
+        <h6 className="text-xs text-custom-text-200 mb-2">Misura (asse-y)</h6>
         <Controller
           name="y_axis"
           control={control}
@@ -62,7 +62,7 @@ export const CustomAnalyticsSelectBar: React.FC<Props> = observer((props) => {
         />
       </div>
       <div>
-        <h6 className="text-xs text-custom-text-200 mb-2">Dimension (x-axis)</h6>
+        <h6 className="text-xs text-custom-text-200 mb-2">Dimensione (asse-x)</h6>
         <Controller
           name="x_axis"
           control={control}
@@ -81,7 +81,7 @@ export const CustomAnalyticsSelectBar: React.FC<Props> = observer((props) => {
         />
       </div>
       <div>
-        <h6 className="text-xs text-custom-text-200 mb-2">Group</h6>
+        <h6 className="text-xs text-custom-text-200 mb-2">Gruppo</h6>
         <Controller
           name="segment"
           control={control}

@@ -19,7 +19,7 @@ export const CustomAnalyticsSidebarProjectsList: React.FC<Props> = observer((pro
 
   return (
     <div className="relative flex flex-col gap-4 h-full">
-      <h4 className="font-medium">Selected Projects</h4>
+      <h4 className="font-medium">Progetti Selezionati</h4>
       <div className="relative space-y-6 overflow-hidden overflow-y-auto vertical-scrollbar scrollbar-md">
         {projectIds.map((projectId) => {
           const project = getProjectById(projectId);
@@ -41,21 +41,21 @@ export const CustomAnalyticsSidebarProjectsList: React.FC<Props> = observer((pro
                 <div className="flex items-center justify-between gap-2 text-xs">
                   <div className="flex items-center gap-2">
                     <Users className="text-custom-text-200" size={14} strokeWidth={2} />
-                    <h6>Total members</h6>
+                    <h6>Membri totali</h6>
                   </div>
                   <span className="text-custom-text-200">{project.total_members}</span>
                 </div>
                 <div className="flex items-center justify-between gap-2 text-xs">
                   <div className="flex items-center gap-2">
                     <Contrast className="text-custom-text-200" size={14} strokeWidth={2} />
-                    <h6>Total cycles</h6>
+                    <h6>Cicli totali</h6>
                   </div>
                   <span className="text-custom-text-200">{project.total_cycles}</span>
                 </div>
                 <div className="flex items-center justify-between gap-2 text-xs">
                   <div className="flex items-center gap-2">
                     <LayoutGrid className="text-custom-text-200" size={14} strokeWidth={2} />
-                    <h6>Total modules</h6>
+                    <h6>Moduli totali</h6>
                   </div>
                   <span className="text-custom-text-200">{project.total_modules}</span>
                 </div>

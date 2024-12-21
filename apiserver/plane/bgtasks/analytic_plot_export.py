@@ -22,19 +22,19 @@ from plane.utils.exception_logger import log_exception
 from plane.utils.issue_filters import issue_filters
 
 row_mapping = {
-    "state__name": "State",
-    "state__group": "State Group",
-    "labels__id": "Label",
-    "assignees__id": "Assignee Name",
-    "start_date": "Start Date",
-    "target_date": "Due Date",
-    "completed_at": "Completed At",
-    "created_at": "Created At",
-    "issue_count": "Issue Count",
-    "priority": "Priority",
-    "estimate": "Estimate",
-    "issue_cycle__cycle_id": "Cycle",
-    "issue_module__module_id": "Module",
+    "state__name": "Stato",
+    "state__group": "Gruppo di Stato",
+    "labels__id": "Etichetta",
+    "assignees__id": "Nome Assegnatario",
+    "start_date": "Data di Inizio",
+    "target_date": "Data di Scadenza",
+    "completed_at": "Data di Completamento",
+    "created_at": "Data di Creazione",
+    "issue_count": "Conteggio Problemi",
+    "priority": "Priorità",
+    "estimate": "Stima",
+    "issue_cycle__cycle_id": "Ciclo",
+    "issue_module__module_id": "Modulo"
 }
 
 ASSIGNEE_ID = "assignees__id"

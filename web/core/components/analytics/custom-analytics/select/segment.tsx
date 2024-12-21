@@ -21,14 +21,14 @@ export const SelectSegment: React.FC<Props> = ({ value, onChange, params, analyt
       label={
         <span>
           {analyticsOptions.find((v) => v.value === value)?.label ?? (
-            <span className="text-custom-text-200">No value</span>
+            <span className="text-custom-text-200">Nessun valore</span>
           )}
         </span>
       }
       onChange={onChange}
       maxHeight="lg"
     >
-      <CustomSelect.Option value={null}>No value</CustomSelect.Option>
+      <CustomSelect.Option value={null}>Nessun valore</CustomSelect.Option>
       {analyticsOptions.map((item) => {
         if (params.x_axis === item.value) return null;
         if (cycleId && item.value === "issue_cycle__cycle_id") return null;

@@ -66,8 +66,8 @@ export const ScopeAndDemand: React.FC<Props> = (props) => {
                   count: user?.count,
                   id: user?.created_by__id,
                 }))}
-                title="Most issues created"
-                emptyStateMessage="Co-workers and the number of issues created by them appears here."
+                title="Maggiore numero di tasks creati"
+                emptyStateMessage="I colleghi e il numero di tasks creati da loro verranno mostrati qui."
                 workspaceSlug={workspaceSlug?.toString() ?? ""}
               />
               <AnalyticsLeaderBoard
@@ -79,8 +79,8 @@ export const ScopeAndDemand: React.FC<Props> = (props) => {
                   count: user?.count,
                   id: user?.assignees__id,
                 }))}
-                title="Most issues closed"
-                emptyStateMessage="Co-workers and the number of issues closed by them appears here."
+                title="Maggiore numero di tasks risolti"
+                emptyStateMessage="I colleghi e il numero di tasks risolti da loro verranno mostrati qui."
                 workspaceSlug={workspaceSlug?.toString() ?? ""}
               />
               <div className={fullScreen ? "md:col-span-2" : ""}>
@@ -99,10 +99,10 @@ export const ScopeAndDemand: React.FC<Props> = (props) => {
       ) : (
         <div className="grid h-full place-items-center p-5">
           <div className="space-y-4 text-custom-text-200">
-            <p className="text-sm">There was some error in fetching the data.</p>
+            <p className="text-sm">Si è verificato un errore durante il recupero dei dati.</p>
             <div className="flex items-center justify-center gap-2">
               <Button variant="primary" onClick={() => mutateDefaultAnalytics()}>
-                Refresh
+                Aggiorna
               </Button>
             </div>
           </div>

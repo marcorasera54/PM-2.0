@@ -43,7 +43,7 @@ export const SelectProject: React.FC<Props> = observer((props) => {
                 ?.filter((p) => value.includes(p))
                 .map((p) => getProjectById(p)?.name)
                 .join(", ")
-            : "All projects"}
+            : "Tutti i progetti"}
         </div>
       }
       multiple

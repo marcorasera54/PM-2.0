@@ -82,7 +82,7 @@ export const ProfileActivity = observer(() => {
             </div>
           ) : (
             <ProfileEmptyState
-              title="No Data yet"
+              title="Nessun dato disponibile"
               description="We couldn’t find data. Kindly view your inputs"
               image={recentActivityEmptyState}
             />

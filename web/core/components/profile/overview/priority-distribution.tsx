@@ -68,7 +68,7 @@ export const ProfilePriorityDistribution: React.FC<Props> = ({ userProfile }) =>
         ) : (
           <div className="flex-grow p-7">
             <ProfileEmptyState
-              title="No Data yet"
+              title="Nessun dato disponibile"
               description="Create issues to view the them by priority in the graph for better analysis."
               image={emptyBarGraph}
             />

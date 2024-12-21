@@ -11,7 +11,7 @@ type Props = {
 export const AnalyticsDemand: React.FC<Props> = ({ defaultAnalytics }) => (
   <Card>
     <div>
-      <h4 className="text-base font-medium text-custom-text-100">Total open tasks</h4>
+      <h4 className="text-base font-medium text-custom-text-100">Totale tasks aperte</h4>
       <h3 className="mt-1 text-xl font-semibold">{defaultAnalytics.open_issues}</h3>
     </div>
     <div className="space-y-6 pb-2">
